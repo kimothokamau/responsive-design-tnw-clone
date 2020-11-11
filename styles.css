@@ -22,28 +22,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-article {
-  display: grid;
-  align-self: center;
-  justify-self: center;
-  background-color: var(--orange);
-  height:50%;
-  width:50%;
- }
 
-
-article > p {
-  font-size: 2em;
-  color: #eee;
-  font-weight: bold;
-  align-self: center;
-  justify-self: center;
-}
 
 .wrapper {
   display: grid;
   grid-template-rows: 10% 80% 10%;
   row-gap: 10px;
+  margin: 0.5em;
   grid-template-areas:
     "header"
     "row-section"
@@ -145,19 +130,23 @@ a {
   "row1-section-3";
 }
 
-/* .row-1 > * {
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  align-items: center;
-} */
+.art {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  background-color: var(--orange);
+  height:50%;
+  width:50%;
+ }
 
-/* .row-1 > article {
-  padding: 10px;
-  background-color: black;
 
-} */
+.art > p {
+  font-size: 1.2em;
+  color: #eee;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
 
 .row1-section-1 {
   display: grid;
@@ -183,12 +172,11 @@ a {
 .row-2 {
   display: grid;
   grid-row: 2/3;
-  grid-template-rows: repeat(9, 80px);
+  grid-template-rows: repeat(9, 105px);
   color: white;
-  font-size: 2rem;
+  font-size: 1.2rem;
   grid-gap: 5px;
   text-align: center;
-  /* align-items: center; */
   grid-area: row-2;
   grid-template-areas: 
   "row2-section-1"
@@ -203,7 +191,7 @@ a {
 }
 
 .row-2 > div {
-  background-color: blueviolet;
+  background-color: var(--grey);
   align-items: center;
 }
 
@@ -264,11 +252,11 @@ a {
 .row-3 {
   display: grid;
   grid-row: 3/4;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: 4em 6em 250px 250px 250px;
   font-size: 1rem;
   grid-gap: 5px;
-  text-align: center;
-  background-color: chartreuse;
+  /* text-align: center; */
+  background-color: white;
   grid-area: row-3;
   grid-template-areas: 
   "row3-section-1"
@@ -278,39 +266,66 @@ a {
   "row3-section-5"
 ;
 }
-.row3-section-1{
+
+.row-3 > div {
+  background-color: var(--grey);
+}
+
+#row3-section-1 {
   display: grid;
   grid-row:1/2 ;
+  color: var(--orange);
+  background-color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  align-items: center;
   grid-area: row3-section-1;
 }
-.row3-section-2{
-  display: grid;
+
+#row3-section-1 > a {
+  color: var(--orange);
+  margin-left: 0.5em;
+}
+
+#row3-section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  justify-content: flex-start;
   grid-template-rows: repeat(3,auto);
   grid-row: 2/3;
+  background-color: var(--white);
   grid-area: row3-section-2;
-  grid-template-areas: 
-  "row3-section-2-buttion-1"
-  "row3-section-2-buttion-2"
-  "row3-section-2-buttion-3";
+  /* grid-template-areas: 
+  "row3-section-2-button-1"
+  "row3-section-2-button-2"
+  "row3-section-2-button-3"; */
+}
+
+#row3-section-2 > a > p {
+  font-size: 1rem;
+  color: var(--orange);
+  padding: 0.5em;
+
 }
 
 .row3-section-2-button-1 {
-display: grid;
-grid-row: 1/2;
-grid-area: row3-section-2-buttion-1;
+
+/* grid-row: 1/2;
+grid-area: row3-section-2-button-1; */
 
 }
 
 .row3-section-2-button-2 {
-  display: grid;
+  /* display: grid;
   grid-row: 2/3;
-  grid-area: row3-section-2-buttion-2;
+  grid-area: row3-section-2-button-2; */
 }
 
 .row3-section-2-button-3 {
-  display: grid;
+  /* display: grid;
   grid-row: 3/4;
-  grid-area: row3-section-2-buttion-3;
+  grid-area: row3-section-2-button-3; */
 }
 
 
