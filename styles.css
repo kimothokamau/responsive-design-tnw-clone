@@ -14,7 +14,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 10% 80% 10%;
   gap: 10px;
   grid-template-areas:
     "header"
@@ -92,9 +92,157 @@ a {
 
 
 .rows-section {
+  display: grid;
+  grid-column: 1/2;
   grid-row: 2/3;
+  grid-template-rows: repeat(5, minmax(1000px, 1fr));
   grid-area: row-section;
+  grid-template-areas: 
+  "row-1"
+  "row-2"
+  "row-3"
+  "row-4"
+  "row-5";
 }
+
+.row-1 {
+  display: grid;
+  grid-row: 1/2;
+  grid-template-rows: repeat(3, 300px);
+  gap: 5px;
+  grid-area: row-1;
+  grid-template-areas: 
+  "row1-section-1"
+  "row1-section-2"
+  "row1-section-3";
+}
+
+.row-1 > * {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  align-items: center;
+}
+
+/* .row-1 > article {
+  padding: 10px;
+  background-color: black;
+
+} */
+
+.row1-section-1 {
+  display: grid;
+  grid-row: 1/2;
+  background-color: red;
+  grid-area: row1-section-1;
+}
+
+.row1-section-2 {
+  display: grid;
+  grid-row: 2/3;
+  background-color: green;
+  grid-area: row1-section-2;
+}
+
+.row1-section-3 {
+  display: grid;
+  grid-row: 3/4;
+  background-color: blue;
+  grid-area: row1-section-3;
+}
+
+.row-2 {
+  display: grid;
+  grid-row: 2/3;
+  grid-template-rows: repeat(9, 80px);
+  color: white;
+  font-size: 2rem;
+  grid-gap: 5px;
+  text-align: center;
+  /* align-items: center; */
+  grid-area: row-2;
+  grid-template-areas: 
+  "row2-section-1"
+  "row2-section-2"
+  "row2-section-3"
+  "row2-section-4"
+  "row2-section-5"
+  "row2-section-6"
+  "row2-section-7"
+  "row2-section-8"
+  "row2-section-9";
+}
+
+.row-2 > div {
+  background-color: blueviolet;
+  align-items: center;
+}
+
+.row2-section-1 {
+  display: grid;
+  grid-row: 1/2;
+  grid-area: row2-section-1;
+}
+
+.row2-section-2 {
+  display: grid;
+  grid-row: 2/3;
+  grid-area: row2-section-2;
+}
+
+.row2-section-3 {
+  display: grid;
+  grid-row: 3/4;
+  grid-area: row2-section-3;
+}
+
+.row2-section-4 {
+  display: grid;
+  grid-row: 4/5;
+  grid-area: row2-section-4;
+}
+
+.row2-section-5 {
+  display: grid;
+  grid-row: 5/6;
+  grid-area: row2-section-5;
+}
+
+.row2-section-6 {
+  display: grid;
+  grid-row: 6/7;
+  grid-area: row2-section-6;
+}
+
+.row2-section-7 {
+  display: grid;
+  grid-row: 7/8;
+  grid-area: row2-section-7;
+}
+
+.row2-section-8 {
+  display: grid;
+  grid-row: 8/9;
+  grid-area: row2-section-8;
+}
+
+.row2-section-9 {
+  display: grid;
+  grid-row: 9/10;
+  grid-area: row2-section-9;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
   grid-row: 3/4;
