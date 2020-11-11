@@ -14,6 +14,7 @@ body {
 
 .wrapper {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
   grid-template-areas:
     "header"
@@ -22,29 +23,95 @@ body {
 }
 
 header {
+  display: grid;
+  grid-row: 1/2;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr ;
   grid-area: header;
-  background-color: aquamarine;
-  font-size: larger;
+  grid-template-areas:
+  "header-row-1"
+  "header-row-2"
+  ;
 }
 
+a {
+  text-decoration: none;
+  color:black;
+}
+.header-row-1{
+  display: grid;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  grid-template-columns: 1fr 1fr;
+  grid-area: header-row-1;
+  grid-template-areas:
+  "header-row1-section-1 header-row1-section-2"
+  ;
+
+}
+
+.header-row1-section-1{
+  display: grid;
+  grid-column:1/2 ;
+  grid-area:header-row1-section-1;
+ background-color: darkred;
+ padding:2em;
+ color: white;
+ font-weight: bold;
+ width:8em;
+ margin:5px;
+}
+.header-row1-section-2{
+  display: grid;
+  justify-items: end; 
+  align-items: center;
+  grid-column: 2/3;
+  grid-area:header-row1-section-2;
+}
+.icon-div{
+  margin-right: 15px;
+}
+.icon {
+  border: 1px solid #eee;
+  padding: 30% 20px;
+}
+
+.header-row-2{
+  display: grid;
+  grid-column:1/-1 ;
+  grid-row: 2/3;
+  background-color: yellow;
+  padding: 1em;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  grid-area:header-row-2;
+
+}
+
+
+
 .rows-section {
+  grid-row: 2/3;
   grid-area: row-section;
 }
 
 footer {
+  grid-row: 3/4;
   grid-area: footer;
 }
 
+
+
+
 @media (min-width: 640px) {
+  
   .wrapper {
+    display: grid;
     grid-template-areas: 
       "header"
       "row-section"
       "footer";
-  }
-  header {
-    grid-area: header;
-    background-color: aquamarine;
-    font-size: larger;
-  }
+    }
+ 
 }
