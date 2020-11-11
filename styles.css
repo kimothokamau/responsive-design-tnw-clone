@@ -26,7 +26,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 3% 87% 10%;
   row-gap: 10px;
   margin: 0.5em;
   grid-template-areas:
@@ -72,6 +72,7 @@ a {
  padding:2em;
  color: white;
  font-weight: bold;
+ width:8em;
  margin:5px;
 }
 .header-row1-section-2{
