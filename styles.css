@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 15px;
+}
+
+body {
+  width: 100%
+}
+
+.wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header"
+    "row-section"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: aquamarine;
+  font-size: larger;
+}
+
+.rows-section {
+  grid-area: row-section;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    grid-template-areas: 
+      "header"
+      "row-section"
+      "footer";
+  }
+  header {
+    grid-area: header;
+    background-color: aquamarine;
+    font-size: larger;
+  }
+}
