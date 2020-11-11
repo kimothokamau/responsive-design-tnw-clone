@@ -483,26 +483,52 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
   grid-row: 3/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   grid-area: footer;
+  grid-template-areas: 
+    "footer-section1"
+    "footer-section3";
 }
 
+.footer-section1 {
+  grid-row: 1/2;
+  display: grid;
+  align-items: center;
+  padding-top: 1em;
+  background-color: rgb(23, 29, 29);
+  text-align: center;
+  height: 150px;
+}
+
+.footer-icons > a {
+  color: white;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  padding: 1em;
+  background-color: var(--grey);
+}
+
+.footer-section2 > a {
+  color: white;
+  padding: 5px;
+}
+.footer-section3 {
+  height: 150px;
+  background-color: var(--black);
+  display: grid;
+  align-items: center;
+}
+
+.footer-section3 > div > p {
+  color: var(--grey);
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1rem;
+  font-weight: 100;
+}
 
 
 
