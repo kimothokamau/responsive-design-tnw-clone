@@ -97,8 +97,8 @@ a {
   font-weight: bold;
   align-items: center;
   justify-content: center;
+  padding:1.5em;
   grid-area:header-row-2;
-
 }
 
 
@@ -108,7 +108,7 @@ a {
   grid-column: 1/2;
   grid-row: 2/3;
   row-gap: 5px;
-  grid-template-rows: repeat(5, minmax(1000px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-area: row-section;
   grid-template-areas: 
   "row-1"
@@ -176,7 +176,6 @@ a {
   color: white;
   font-size: 1.2rem;
   grid-gap: 5px;
-  text-align: center;
   grid-area: row-2;
   grid-template-areas: 
   "row2-section-1"
@@ -192,13 +191,21 @@ a {
 
 .row-2 > div {
   background-color: var(--grey);
-  align-items: center;
 }
 
-.row2-section-1 {
+#row2-section-1 {
   display: grid;
-  grid-row: 1/2;
+  grid-row:1/2 ;
+  color: var(--orange);
+  background-color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  align-items: center;
   grid-area: row2-section-1;
+}
+#row2-section-1 > a {
+  color: var(--orange);
+  margin-left: 0.5em;
 }
 
 .row2-section-2 {
@@ -255,7 +262,6 @@ a {
   grid-template-rows: 4em 6em 250px 250px 250px;
   font-size: 1rem;
   grid-gap: 5px;
-  /* text-align: center; */
   background-color: white;
   grid-area: row-3;
   grid-template-areas: 
@@ -309,25 +315,6 @@ a {
 
 }
 
-.row3-section-2-button-1 {
-
-/* grid-row: 1/2;
-grid-area: row3-section-2-button-1; */
-
-}
-
-.row3-section-2-button-2 {
-  /* display: grid;
-  grid-row: 2/3;
-  grid-area: row3-section-2-button-2; */
-}
-
-.row3-section-2-button-3 {
-  /* display: grid;
-  grid-row: 3/4;
-  grid-area: row3-section-2-button-3; */
-}
-
 
 .row3-section-3{
   display: grid;
@@ -344,6 +331,162 @@ grid-area: row3-section-2-button-1; */
   grid-row: 5/6;
   grid-area: row3-section-5;
 }
+
+
+.row4{
+  display: grid;
+  grid-row: 4/5;
+  grid-template-rows: repeat(9, 200px);
+  font-size: 1rem;
+  grid-gap: 5px;
+  background-color: white;
+  grid-area: row-4;
+  grid-template-areas: 
+  "row4-section-1"
+  "row4-section-2"
+  "row4-section-3"
+  "row4-section-4"
+  "row4-section-5"
+  "row4-section-6"
+  "row4-section-7"
+  "row4-section-8"
+  "row4-section-9";
+}
+.row-4 > div {
+  background-color: var(--grey);
+  margin:10px;
+  height:100px;
+}
+.row4-section-1{
+  display: grid;
+  grid-row: 1/2;
+  grid-area: row4-section-1;
+}
+.row4-section-2{
+  display: grid;
+  grid-row: 2/3;
+  grid-area: row4-section-2;
+}
+.row4-section-3{
+  display: grid;
+  grid-row: 3/4;
+  grid-area: row4-section-3;
+}
+.row4-section-4{
+  display: grid;
+  grid-row: 4/5;
+  grid-area: row4-section-4;
+}
+.row4-section-5{
+  display: grid;
+  grid-row: 5/6;
+  grid-area: row4-section-5;
+}
+
+.row4-section-6{
+  display: grid;
+  grid-row: 6/7;
+  grid-area: row4-section-6;
+}
+
+.row4-section-7{
+  display: grid;
+  grid-row: 7/8;
+  grid-area: row4-section-7;
+}
+
+.row4-section-8{
+  display: grid;
+  grid-row: 8/9;
+  grid-area: row4-section-8;
+}
+
+.row4-section-9{
+  display: grid;
+  grid-row: 9/10;
+  grid-area: row4-section-9;
+}
+
+
+
+
+.row5{
+  display: grid;
+  grid-row: 5/6;
+  grid-template-rows: repeat(9, 200px);
+  font-size: 1rem;
+  grid-gap: 5px;
+  background-color: white;
+  grid-area: row-5;
+  grid-template-areas: 
+  "row5-section-1"
+  "row5-section-2"
+  "row5-section-3"
+  "row5-section-4"
+  "row5-section-5"
+  "row5-section-6"
+  "row5-section-7"
+  "row5-section-8"
+  "row5-section-9";
+}
+.row-5 > div {
+  background-color: var(--grey);
+  margin:10px;
+  height:100px;
+}
+.row5-section-1{
+  display: grid;
+  grid-row: 1/2;
+  grid-area: row5-section-1;
+}
+.row5-section-2{
+  display: grid;
+  grid-row: 2/3;
+  grid-area: row5-section-2;
+}
+.row5-section-3{
+  display: grid;
+  grid-row: 3/4;
+  grid-area: row5-section-3;
+}
+.row5-section-4{
+  display: grid;
+  grid-row: 4/5;
+  grid-area: row5-section-4;
+}
+.row5-section-5{
+  display: grid;
+  grid-row: 5/6;
+  grid-area: row5-section-6;
+}
+.row5-section-6{
+  display: grid;
+  grid-row: 6/7;
+  grid-area: row5-section-6;
+}
+.row5-section-7{
+  display: grid;
+  grid-row: 7/8;
+  grid-area: row5-section-7;
+}
+.row5-section-8{
+  display: grid;
+  grid-row: 8/7;
+  grid-area: row5-section-8;
+}
+
+.row5-section-9{
+  display: grid;
+  grid-row: 9/10;
+  grid-area: row5-section-9;
+}
+
+
+
+
+
+
+
 
 
 
