@@ -542,5 +542,71 @@ footer {
       "row-section"
       "footer";
     }
- 
+
+    header {
+      display: grid;
+      grid-row: 1/2;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 1fr ;
+      margin:20px;
+      grid-area: header;
+      grid-template-areas:
+      "header-row-1"
+      "header-row-2"
+      ;
+    }
+
+    .header-row-1{
+      display: grid;
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      grid-template-columns: 10% 90%;
+      grid-area: header-row-1;
+      grid-template-areas:
+      "header-row1-section-1 header-row1-section-00"
+      "header-row1-section-1 header-row1-section-2"
+
+      ;
+    
+    }
+
+    .row-1 {
+      display: grid;
+      grid-row: 1/2;
+      grid-template-rows: repeat(3, auto);
+      gap: 5px;
+      grid-area: row-1;
+      grid-template-areas: 
+      "row1-section-1 row1-section-2"
+      "row1-section-1 row1-section-3";
+    }
+
+    .header-row1-section-00 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .header1-row1-section-01 {
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+    }
+    .header1-row1-section-01  a {
+      width:6em;
+    }
+
+ .header1-row1-section-02 {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.header1-row1-section-02  a {
+  width:6em;
+}
+
+
+
+
 }
