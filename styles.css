@@ -51,7 +51,7 @@ body {
     text-decoration: none;
     color:black;
   }
-  .header-row-1{
+  /* .header-row-1{
     display: grid;
     grid-column: 1/-1;
     grid-row: 1/2;
@@ -61,7 +61,7 @@ body {
     "header-row1-section-1 header-row1-section-2"
     ;
   
-  }
+  } */
   
   .header-row1-section-00 {
     display: none;
@@ -576,7 +576,7 @@ gap: 15px;
     .header-row-1 {
       display: grid;
       grid-row: 1/2;
-      grid-template-rows: 50px 50px;
+      grid-template-rows: 100px 50px;
       grid-area: header-row-1;
       grid-template-areas:
       "header-row1-section-00"
@@ -598,9 +598,16 @@ gap: 15px;
     .header-row1-section-2 {
       grid-row: 2/3;
       display: flex;
+      margin-top:10px;
       justify-content: space-between;
       grid-area: header-row1-section-2;
     }
+    .header-row1-section-2-1  {
+      font-size: 12px;
+      width:80em;
+      padding:20px;
+    }
+
 
     .header1-row1-section-01 {
       display: flex;
@@ -637,6 +644,7 @@ gap: 15px;
     .header-row-2 {
       grid-area: header-row-2;
       grid-row: 2/3;
+      margin-top:100px;
     }
 
     .rows-section {
@@ -644,6 +652,7 @@ gap: 15px;
       grid-column: 1/2;
       grid-row: 2/3;
       gap: 15px; 
+      margin-top: 30px;
       grid-template-rows: 500px 700px 250px 1250px 600px;
       grid-area: row-section;
       grid-template-areas: 
@@ -654,6 +663,9 @@ gap: 15px;
       "row-5";
     }
 
+    .fa-bars {
+      display: none;
+    }
     .row-1 {
       display: grid;
       grid-row: 1/2;
