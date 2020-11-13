@@ -383,7 +383,6 @@ body {
     grid-row: 4/5;
     grid-template-rows: repeat(9, 200px);
     font-size: 1rem;
-    grid-gap: 15px; 
     background-color: white;
     grid-area: row-4;
     grid-template-areas: 
@@ -399,7 +398,7 @@ body {
   }
   .row-4 > div {
     background-color: var(--grey);
-    margin:10px;
+    margin:10px 0;
     height:100px;
   }
   .row4-section-1{
@@ -478,6 +477,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
+  
   .deals p > a{
     padding:10px;
     margin: 0 10px;
@@ -485,7 +485,7 @@ body {
   }
   .row-5 > div {
     background-color: var(--grey);
-    margin:10px;
+    margin:10px 0;
     height:100px;
   }
   
@@ -502,6 +502,15 @@ body {
     grid-row: 1/2;
     grid-area: row5-section-1-5;
   }
+  .row5-section-1-5 a{
+  
+  display: flex;
+  width: 100px;
+  font-size: .75em;
+  justify-content: flex-end;
+  }
+  
+    
   .row5-section-2{
     display: grid;
     grid-row: 2/3;
@@ -882,12 +891,15 @@ body {
   padding: 1em;
 
 }
+.row5-section-1-5 {
+  margin: 0 10px;
+}
 
 .row5-section-1-5 > a {
   color: var(--orange);
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 1em;
+  font-size: .75rem;
+  font-weight: 600;
+  width: 10em;
 }
 
 .deals a:hover {
