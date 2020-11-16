@@ -63,18 +63,6 @@ a {
     "header-row-2";
 }
 
-/* .header-row-1{
-    display: grid;
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    grid-template-columns: 1fr 1fr;
-    grid-area: header-row-1;
-    grid-template-areas:
-    "header-row1-section-1 header-row1-section-2"
-    ;
-
-  } */
-
 .header-row1-section-00 {
   display: none;
 }
@@ -135,7 +123,7 @@ a {
   grid-column: 1/2;
   grid-row: 2/3;
   gap: 15px;
-  grid-template-rows: 60em 1fr 60em 62em 58em;
+  grid-template-rows: 60em 1fr 60em 62em 122em;
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -399,7 +387,7 @@ a {
   grid-area: row3-section-5;
 }
 
-.row4 {
+.row-4 {
   display: grid;
   grid-row: 4/5;
   grid-template-rows: repeat(9, 200px);
@@ -478,12 +466,12 @@ a {
   grid-area: row4-section-9;
 }
 
-.row5 {
+.row-5 {
   display: grid;
   grid-row: 5/6;
-  grid-template-rows: repeat(9, 200px);
+  grid-template-rows: 100px 200px 200px 200px 200px 200px 200px 200px 200px;
   font-size: 1rem;
-  grid-gap: 15px;
+  gap: 15px;
   background-color: white;
   grid-area: row-5;
   grid-template-areas:
@@ -504,9 +492,15 @@ a {
 }
 
 .row-5 > nav {
+  background-color: white;
+  margin: 10px 0;
+  height: 60px;
+}
+
+.row-5 > div {
   background-color: var(--grey);
   margin: 10px 0;
-  height: 100px;
+  height: 200px;
 }
 
 .row5-section-1 {
@@ -544,7 +538,7 @@ a {
 .row5-section-5 {
   display: grid;
   grid-row: 5/6;
-  grid-area: row5-section-6;
+  grid-area: row5-section-5;
 }
 
 .row5-section-6 {
@@ -586,7 +580,6 @@ footer {
   display: grid;
   align-items: center;
   padding-top: 1em;
-  background-color: rgb(23, 29, 29);
   text-align: center;
   height: 150px;
 }
@@ -853,7 +846,6 @@ footer {
     background-color: var(--grey);
     height: 100%;
   }
-
   
   .row5-section-1 > a {
     color: var(--orange);
