@@ -25,7 +25,7 @@ body {
 .wrapper {
   display: grid;
   grid-template-rows: 30px 1fr 60px;
-  row-gap: 15px;
+  /* row-gap: 15px; */
   margin: 0.5em;
   grid-template-areas:
     "main-header"
@@ -588,7 +588,6 @@ footer {
   grid-row: 1/2;
   display: grid;
   align-items: center;
-  padding-top: 1em;
   text-align: center;
   height: 7em;
   background-color:  #3f3f3f ;
@@ -619,6 +618,7 @@ footer {
 
   .wrapper {
     display: grid;
+    margin: 0 1em;
     width: 100%;
     grid-template-areas:
       "main-header"
@@ -808,14 +808,19 @@ footer {
     width: 25em;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
   }
 
   #row3-section-2 > a {
     font-size: 1rem;
     color: var(--orange);
     font-weight: 700;
-    padding: 0.5em;
+    padding: 0 0.5em;
     border-right: 1px solid var(--orange);
+  }
+
+  #row3-section-2 > .row3-section-2-button-3 {
+    border-right: none;
   }
 
   .row3-section-6 {
@@ -872,7 +877,8 @@ footer {
   .row5-section-1-b > a {
     font-size: 1rem !important;
     font-weight: 100 !important;
- 
+    margin-right: 1.5em;
+    
   }
 
   .row5-section-1 > div > a {
@@ -937,6 +943,10 @@ footer {
     grid-row: 5/6;
     grid-area: row5-section-9;
   }
+
+  .footer-section1 {
+    margin-top: 1em
+  }
 }
 
 /* PC LAYOUT (portrait and landscape) */
@@ -993,7 +1003,7 @@ footer {
   .header-row1-section-2 {
     grid-row: 2/3;
     display: flex;
-    padding: 15px;
+    /* padding: 15px; */
     width: 100%;
     grid-area: header-row1-section-2;
   }
