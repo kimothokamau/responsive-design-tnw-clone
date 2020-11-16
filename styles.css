@@ -940,16 +940,17 @@ footer {
 
   .wrapper {
     display: grid;
-    width: 100%;
+    /* width: 100%; */
+    grid-template-rows: 200px 1fr 200px;
     grid-template-areas:
       "main-header"
       "row-section"
-      "footer";
+      "footer !important";
   }
 
   .main-header {
     display: grid;
-    grid-row: 1/-1;
+    grid-row: 1/2;
     grid-template-columns: 1fr;
     grid-template-rows: 90px 60px;
     width: 100%;
@@ -1042,7 +1043,6 @@ footer {
 
   .rows-section {
     display: grid;
-    grid-column: 1/2;
     grid-row: 2/3;
     gap: 15px;
     grid-template-rows: 500px 700px 270px 700px 1000px;
@@ -1190,17 +1190,17 @@ footer {
     width: 10em;
   }
 
-  .deals a:hover {
+  .row5-section-1 a:hover {
     color: black;
   }
 
-  .deals {
+  .row5-section-1 {
     display: flex;
     grid-column: 1/-1;
     grid-row: 1/2;
     justify-content: space-between;
     align-items: center;
-    grid-area: deals;
+    grid-area: row5-section-1;
   }
 
   .row5-section-2 {
@@ -1258,4 +1258,9 @@ footer {
     grid-row: 3/4;
     grid-area: row5-section-9;
   }
+}
+
+footer {
+  grid-row: 3/4;
+  grid-area: footer;
 }
