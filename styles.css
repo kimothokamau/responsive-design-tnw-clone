@@ -123,7 +123,7 @@ a {
   grid-column: 1/2;
   grid-row: 2/3;
   gap: 15px;
-  grid-template-rows: 60em 1fr 60em 62em 122em;
+  grid-template-rows: 60em 1fr 60em 120em 112em;
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -390,8 +390,9 @@ a {
 .row-4 {
   display: grid;
   grid-row: 4/5;
-  grid-template-rows: repeat(9, 200px);
+  grid-template-rows: 200px  200px 200px 200px 200px 200px 200px 200px 200px;
   font-size: 1rem;
+  gap: 15px;
   background-color: white;
   grid-area: row-4;
   grid-template-areas:
@@ -409,7 +410,7 @@ a {
 .row-4 > div {
   background-color: var(--grey);
   margin: 10px 0;
-  height: 100px;
+  height: 100%;
 }
 
 .row4-section-1 {
@@ -469,7 +470,7 @@ a {
 .row-5 {
   display: grid;
   grid-row: 5/6;
-  grid-template-rows: 100px 200px 200px 200px 200px 200px 200px 200px 200px;
+  grid-template-rows: 50px 200px 200px 200px 200px 200px 200px 200px 200px;
   font-size: 1rem;
   gap: 15px;
   background-color: white;
@@ -568,7 +569,7 @@ a {
 footer {
   grid-row: 3/4;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 80px 40px;
   grid-area: footer;
   grid-template-areas:
     "footer-section1"
@@ -581,18 +582,25 @@ footer {
   align-items: center;
   padding-top: 1em;
   text-align: center;
-  height: 150px;
+  height: 7em;
+  background-color:  #3f3f3f ;
 }
 
 .footer-section2 {
   padding: 2px;
 }
 
+.footer-section2 > a {
+  color:white;
+}
+
 .footer-section3 {
   height: 150px;
   background-color: var(--black);
   display: grid;
-  align-items: center;
+  color: white;
+  place-items: center center;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -711,7 +719,7 @@ footer {
     grid-column: 1/2;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 800px 900px 800px 900px 1000px;
+    grid-template-rows: 800px 1000px 800px 920px 2800px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -812,7 +820,7 @@ footer {
     display: grid;
     grid-row: 4/5;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 400px);
+    grid-template-rows: repeat(3, 300px);
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
@@ -829,59 +837,43 @@ footer {
   .row-5 {
     display: grid;
     grid-row: 5/6;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30px 250px 250px 250px;
     gap: 15px;
     grid-area: row-5;
     grid-template-areas:
-      "deals deals deals deals"
+      "row5-section-1  row5-section-1 row5-section-1"
       /* "row5-section-1  .  .  row5-section-1-5" */
-      "row5-section-2   row5-section-3 "
-      "row5-section-4  row5-section-5"
-      "row5-section-6  row5-section-7 "
-      "row5-section-8    row5-section-9";
+      "row5-section-2   row5-section-3   row5-section-4"
+      "row5-section-5   row5-section-6   row5-section-7 "
+      "row5-section-8   row5-section-9";
   }
 
-  .row-5 > nav {
-    background-color: var(--grey);
+  .row-5 > * {
     height: 100%;
   }
   
+  /* .row-5 > div {
+    background-color: var(--grey);
+    height: 100%;
+  }
+   */
   .row5-section-1 > a {
     color: var(--orange);
     font-size: 1.5rem;
     font-weight: 700;
     padding: 1em;
+    background-color: #eee;
   }
 
-  .row5-section-1-5 {
-    margin: 0 10px;
-  }
-
-  .row5-section-1-5 > a {
-    color: var(--orange);
-    font-size: 0.75rem;
-    font-weight: 600;
-    width: 10em;
-  }
-
-  .deals a:hover {
-    color: black;
-  }
-
-  .deals {
-    display: flex;
-    grid-column: 1/-1;
+  .row5-section-1 {
+    grid-column: 1/4;
     grid-row: 1/2;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    grid-area: deals;
-  }
+    grid-area: row5-section-1;
 
-  .row-5 .deals {
-    background-color: white;
   }
-
 
   .row5-section-2 {
     display: grid;
@@ -906,36 +898,36 @@ footer {
 
   .row5-section-5 {
     display: grid;
-    grid-column: 4/5;
-    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-row: 3/4;
     grid-area: row5-section-5;
   }
 
   .row5-section-6 {
     display: grid;
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 3/4;
     grid-area: row5-section-6;
   }
 
   .row5-section-7 {
     display: grid;
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 3/4;
     grid-area: row5-section-7;
   }
 
   .row5-section-8 {
     display: grid;
-    grid-column: 3/4;
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 5/6;
     grid-area: row5-section-8;
   }
 
   .row5-section-9 {
     display: grid;
-    grid-column: 4/5;
-    grid-row: 3/4;
+    grid-column: 3/4;
+    grid-row: 5/6;
     grid-area: row5-section-9;
   }
 }
