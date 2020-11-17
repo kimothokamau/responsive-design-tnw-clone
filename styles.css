@@ -116,7 +116,7 @@ a {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
-  grid-template-rows: 60em 1fr 60em 120em 112em;
+  grid-template-rows: 48em 1fr 60em 120em 112em;
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -129,7 +129,7 @@ a {
 .row-1 {
   display: grid;
   grid-row: 1/2;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows:  15em 15em 15em;
   gap: 15px;
   grid-area: row-1;
   grid-template-areas:
@@ -139,18 +139,33 @@ a {
 }
 
 .row-1-art {
-display: flex;
-padding:1em;
-}
+display: grid;
+height:15px;
+align-self: flex-end;
 
-.row-1-art > p {
+}
+.row-1-art :nth-child(1) {
+color: white;
+font-size: 1em;
+font-weight: 300;
+
+}
+.row-1-art :nth-child(2) {
 color: white;
 font-size: 1.5em;
 font-weight: bold;
 display: flex;
 align-self: end;
+align-items: flex-end;
+
 }
 
+.bottom-of-row1-title {
+  color: lightgray;
+  padding:10px;
+  display: flex;
+  align-items: flex-end;
+}
 .row1-section-1 {
   display: grid;
   grid-row: 1/2;
@@ -215,6 +230,7 @@ align-self: end;
 
 .row2-section-2 {
   background-size: cover;
+  width:10px;
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/06/ABN-ROBOT-EDITORIAL-540x270.jpg");
 }
 
@@ -237,8 +253,7 @@ align-self: end;
 .row2-section-6 {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://img-cdn.tnwcdn.com/image?url=https%3A%2F%2Fpbs.twimg.com%2Fprofile_images%2F1062291156174815233%2FyJjZtEzD.jpg&signature=3d388c2776d9ba6ebbd5b6b909d2150a")
- ;}  
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/tesla-nand-flash-memory-nhtsa-error-car-future-ev-sad-failure-nvidia-tegra-480x270.jpg"); ;}  
 .row2-section-7 {
   background-size: cover;
   background-repeat: no-repeat;
