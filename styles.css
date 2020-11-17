@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -457,8 +459,7 @@ align-items: flex-end;
 .row-4 {
   display: grid;
   grid-row: 4/5;
-  grid-template-rows: 200px  200px 200px 200px 200px 200px 200px 200px 200px;
-  font-size: 1rem;
+  grid-template-rows: repeat(9, 2000px);
   gap: 15px;
   background-color: white;
   grid-area: row-4;
@@ -470,20 +471,84 @@ align-items: flex-end;
     "row4-section-5"
     "row4-section-6"
     "row4-section-7"
-    "row4-section-8"
-    "row4-section-9";
-}
-
-.row-4 > div {
-  background-color: var(--grey);
-  margin: 10px 0;
-  height: 100%;
+    "row4-section-8";
 }
 
 .row4-section-1 {
-  display: grid;
   grid-row: 1/2;
   grid-area: row4-section-1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hardfork-card {
+  background-image: url(./asset/hardfork-img.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 578px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.row4-section-1 > h1 {
+  color: #f42;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hardfork-card > * {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+.hardfork-card > p {
+  font-size: 1.4rem;
+  font-weight: bolder
+}
+
+.author {
+  font-size: 0.7rem;
+  color: gray;
+}
+
+.hardfork-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.hardfork-sub {
+  display: flex;
+  height: 96px;
+  justify-content: space-between;
+}
+.elon-desc {
+  color: #f42;
+  background-color: rgb(236, 219, 216);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-self: center;
+
+}
+
+.elon-img > img{
+  width: 96px;
+  height: 96px;
+  justify-self: flex-end;
+}
+
+.hardfork-desc > ul > li {
+  line-height: 1.6;
+  margin-bottom: 1em;
+  list-style: circle;
+  border-bottom: 1px solid lightgrey;
+
 }
 
 .row4-section-2 {
@@ -533,6 +598,7 @@ align-items: flex-end;
   grid-row: 9/10;
   grid-area: row4-section-9;
 }
+
 
 .row-5 {
   display: grid;
