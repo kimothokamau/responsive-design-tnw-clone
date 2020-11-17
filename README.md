@@ -7,7 +7,7 @@ A Responsive heat map of the The Next Web (https://thenextweb.com/) website that
 
 
 
-![screenshot]()
+![screenshot](./asset/screenshot.png)
  
 ## Built With
 
@@ -17,7 +17,7 @@ A Responsive heat map of the The Next Web (https://thenextweb.com/) website that
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://kimothokamau.github.io/responsive-design-tnw-clone/)
 
 👤 **Railon Acosta**
 

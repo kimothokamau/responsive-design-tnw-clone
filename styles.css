@@ -25,6 +25,7 @@ body {
 .wrapper {
   display: grid;
   grid-template-rows: 30px 1fr 60px;
+
   /* row-gap: 15px; */
   margin: 0.5em;
   grid-template-areas:
@@ -42,19 +43,18 @@ body {
   background-color: #eee;
   grid-area: main-header;
   position: absolute;
-  grid-template-areas:
-    "header-row-1";
- }
+  grid-template-areas: "header-row-1";
+}
 
- .header-row-1 {
-   grid-column: 1/-1;
-   grid-row: 1/2;
-   grid-template-rows: 50px 10px;
-   grid-area: header-row-1;
-   grid-template-areas: 
+.header-row-1 {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  grid-template-rows: 50px 10px;
+  grid-area: header-row-1;
+  grid-template-areas:
     "header-row1-section-00"
     "header-row1-section-2";
- }
+}
 
 .header-row1-section-00 {
   display: none;
@@ -65,8 +65,7 @@ body {
   grid-template-columns: 20% 60% 20%;
   border-bottom: 0.5px solid lightgray;
   grid-area: header-row1-section-2;
-  grid-template-areas: 
-   "header-row1-section-1 . icon-div";
+  grid-template-areas: "header-row1-section-1 . icon-div";
 }
 
 .header-row1-section-1 {
@@ -78,6 +77,11 @@ body {
   font-weight: bold;
   width: 4em;
   text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .header-row1-section-1 > a {
@@ -105,24 +109,8 @@ body {
 }
 
 .header-row-2 {
-  /* display: grid;
-  grid-column: 1/-1;
-  grid-row: 2/3;
-  background-color: yellow;
-  font-weight: bold;
-  align-items: center;
-  justify-content: center;
-  padding: 2em;
-  grid-area: header-row-2; */
   display: none;
 }
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-
 
 .rows-section {
   display: grid;
@@ -162,7 +150,7 @@ a {
 .art > p {
   font-size: 1.2em;
   color: #eee;
-  padding:20px;
+  padding: 20px;
   font-weight: bold;
   align-self: center;
   justify-self: center;
@@ -245,6 +233,22 @@ a {
   width: 75%;
 }
 
+.row3-section-2 > a {
+  font-weight: 700;
+}
+
+.row5-section-1-a > a {
+  background-color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange) !important;
+}
+
+.row5-section-1-b > a {
+  background-color: var(--white);
+  font-weight: 700;
+  color: var(--orange) !important;
+}
 
 #row2-section-1 > a {
   color: var(--orange);
@@ -343,20 +347,11 @@ a {
   grid-row: 2/3;
   background-color: var(--white);
   grid-area: row3-section-2;
-
-  /* grid-template-areas:
-    "row3-section-2-button-1"
-    "row3-section-2-button-2"
-    "row3-section-2-button-3"; */
 }
 
 #row3-section-2 > a > p {
   font-size: 1.2rem;
-  color: var(--orange)
-}
-
-row3-section-2 > a {
-  font-weight: 700;
+  color: var(--orange);
 }
 
 .button {
@@ -496,25 +491,9 @@ row3-section-2 > a {
   align-items: center;
 }
 
-
 .row-5 > div {
   background-color: var(--grey);
 }
-
-.row5-section-1-a > a {
-  background-color: var(--white);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--orange) !important;
-}
-
-.row5-section-1-b > a {
-  background-color: var(--white);
-  font-weight: 700;
-  color: var(--orange) !important;
-}
-
-
 
 .row5-section-1-5 {
   display: grid;
@@ -586,16 +565,12 @@ footer {
   align-items: center;
   text-align: center;
   height: 7em;
-  background-color: #3f3f3f ;
+  background-color: #3f3f3f;
 }
 
 .footer-section2 {
   padding: 2px;
-  font-size: .75em;
-}
-
-.footer-section2 > a {
-  color: white;
+  font-size: 0.75em;
 }
 
 .footer-section3 {
@@ -677,7 +652,7 @@ footer {
   .header-row1-section-2-1 a {
     color: darkgrey;
     display: flex;
-    padding:7px;
+    padding: 7px;
     align-items: center;
     justify-content: space-between;
     font-family: Shentox, sans-serif;
@@ -685,11 +660,13 @@ footer {
 
   .header1-row1-section-01 > a {
     padding: 8px;
-    color: hsla(0, 0%, 100%, 0.6)
+    color: hsla(0, 0%, 100%, 0.6);
   }
+
   .header1-row1-section-02 {
     display: flex;
-    margin-left:50px;
+    margin-left: 50px;
+
     /* width: 200px; */
     grid-area: header-row1-section-2-1;
   }
@@ -697,6 +674,19 @@ footer {
   .header1-row1-section-02 a {
     color: hsla(0, 0%, 100%, 0.6);
     padding: 7px;
+  }
+
+  .row5-section-1-b > a {
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    margin-right: 1.5em;
+  }
+
+  .row5-section-1 > div > a {
+    color: var(--orange);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.25em;
   }
 
   .header1-row1-section-01 a:hover,
@@ -733,7 +723,7 @@ footer {
     display: flex;
     align-items: center;
     grid-area: icon-div;
-    margin-left:15em;
+    margin-left: 15em;
   }
 
   .fa-bars {
@@ -793,10 +783,8 @@ footer {
     font-weight: 100;
   }
 
-
   .row-3 #row3-section-2 {
     display: flex;
-    width: 25em;
     flex-direction: row;
     align-items: center;
     width: 21em;
@@ -804,7 +792,7 @@ footer {
   }
 
   #row3-section-2 > a {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--orange);
     font-weight: 700;
     padding: 0 0.5em;
@@ -854,7 +842,6 @@ footer {
       "row5-section-8   row5-section-9";
   }
 
-
   .row5-section-1 {
     grid-column: 1/4 !important;
     background-color: white !important;
@@ -864,20 +851,6 @@ footer {
     justify-content: space-between;
     height: 50px !important;
     align-items: center;
-  }
-
-  .row5-section-1-b > a {
-    font-size: 1rem !important;
-    font-weight: 100 !important;
-    margin-right: 1.5em;
-    
-  }
-
-  .row5-section-1 > div > a {
-    color: var(--orange);
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 0.25em;
   }
 
   .row5-section-2 {
@@ -937,7 +910,7 @@ footer {
   }
 
   .footer-section1 {
-    margin-top: 1em
+    margin-top: 1em;
   }
 }
 
@@ -985,18 +958,12 @@ footer {
     display: none;
   }
 
-  .header-row1-section-00 {
-    grid-row: 1/2;
-    align-items: center;
-    background-color: black;
-    grid-area: header-row1-section-00;
-  }
-
   .header-row1-section-2 {
     grid-row: 2/3;
     display: flex;
     width: 100%;
     height: 50px;
+    justify-content: space-between;
     grid-area: header-row1-section-2;
   }
 
@@ -1028,6 +995,20 @@ footer {
     margin-right: 5em;
     justify-content: space-between;
     grid-area: header-row1-section-2-1;
+  }
+
+  .row5-section-1 > a {
+    color: var(--orange);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1em;
+  }
+
+  .row5-section-1-5 > a {
+    color: var(--orange);
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 10em;
   }
 
   .header1-row1-section-01 a,
@@ -1068,32 +1049,19 @@ footer {
   .icon-div {
     display: flex;
     grid-area: icon-div;
+    margin-right: 30px;
   }
 
   .fa-search {
     margin-left: 29em;
     border: solid 1px lightgray;
-    padding:15px;
+    padding: 15px;
   }
 
   .fa-bars {
     display: none;
     margin: 100px;
   }
-
-  .row-1 {
-    display: grid;
-    grid-row: 1/2;
-    grid-template-columns: 66% 33%;
-    grid-template-rows: repeat(2, auto);
-    gap: 15px;
-    grid-area: row-1;
-    grid-template-areas:
-      "row1-section-1 row1-section-2"
-      "row1-section-1 row1-section-3";
-  }
-
- 
 
   .row-1 {
     display: grid;
@@ -1108,14 +1076,12 @@ footer {
       "row1-section-1 row1-section-3";
   }
 
-
   .header-row1-section-00 {
     display: flex;
     justify-content: space-between;
     background-color: var(--black);
     font-size: 0.8rem;
   }
-  
 
   .row-2 {
     display: grid;
@@ -1158,7 +1124,7 @@ footer {
   }
 
   #row3-section-2 > a {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--orange);
     font-weight: 700;
     border-right: 2px solid var(--orange);
@@ -1215,36 +1181,10 @@ footer {
     background-color: white;
   }
 
-  .row5-section-1 > a {
-    color: var(--orange);
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 1em;
-  }
-
   .row5-section-1-5 {
     margin: 0 10px;
   }
 
-  .row5-section-1-5 > a {
-    color: var(--orange);
-    font-size: 0.75rem;
-    font-weight: 600;
-    width: 10em;
-  }
-
-  .deals a:hover {
-    color: black;
-  }
-
-  .deals {
-    display: flex;
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    justify-content: space-between;
-    align-items: center;
-    grid-area: deals;
-  }
 
   .row5-section-2 {
     display: grid;
