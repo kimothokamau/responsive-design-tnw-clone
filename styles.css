@@ -162,6 +162,7 @@ a {
 .art > p {
   font-size: 1.2em;
   color: #eee;
+  padding:20px;
   font-weight: bold;
   align-self: center;
   justify-self: center;
@@ -244,11 +245,6 @@ a {
   width: 75%;
 }
 
-.deals p > a {
-  padding: 10px;
-  margin: 0 10px;
-  color: var(--orange);
-}
 
 #row2-section-1 > a {
   color: var(--orange);
@@ -590,21 +586,23 @@ footer {
   align-items: center;
   text-align: center;
   height: 7em;
-  background-color:  #3f3f3f ;
+  background-color: #3f3f3f ;
 }
 
 .footer-section2 {
   padding: 2px;
+  font-size: .75em;
 }
 
 .footer-section2 > a {
-  color:white;
+  color: white;
 }
 
 .footer-section3 {
   height: 150px;
   background-color: var(--black);
   display: grid;
+  padding: 15px;
   color: white;
   place-items: center center;
   text-align: center;
@@ -630,7 +628,7 @@ footer {
     display: grid;
     grid-row: 1/-1;
     grid-template-columns: 1fr;
-    grid-template-rows: 90px 60px;
+    grid-template-rows: 90px;
     width: 100%;
     background-color: #eee;
     grid-area: main-header;
@@ -643,7 +641,7 @@ footer {
   .header-row-1 {
     display: grid;
     grid-row: 1/2;
-    grid-template-rows: 40px 40px;
+    grid-template-rows: 40px 50px;
     grid-area: header-row-1;
     grid-template-areas:
       "header-row1-section-00"
@@ -658,53 +656,47 @@ footer {
     grid-row: 1/2;
     align-items: center;
     display: flex;
-    justify-content: space-between;
     background-color: var(--black);
     grid-area: header-row1-section-00;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .header-row1-section-2 {
     grid-row: 2/3;
     display: flex;
-    padding: 15px;
-    width: 100%;
     grid-area: header-row1-section-2;
   }
 
   .header-row1-section-2-1 {
     display: flex;
-    font-size: 13px;
+    font-size: 10px;
     justify-content: space-around;
-    width: 50em;
     grid-area: header-row1-section-2-1;
   }
 
   .header-row1-section-2-1 a {
     color: darkgrey;
     display: flex;
+    padding:7px;
+    align-items: center;
     justify-content: space-between;
     font-family: Shentox, sans-serif;
   }
 
-  .header1-row1-section-01 {
-    display: flex;
-    width: 700px;
-    justify-content: space-between;
-    padding: 40px;
+  .header1-row1-section-01 > a {
+    padding: 8px;
+    color: hsla(0, 0%, 100%, 0.6)
   }
-
   .header1-row1-section-02 {
     display: flex;
-    width: 200px;
-    margin-right: 2em;
-    justify-content: space-between;
+    margin-left:50px;
+    /* width: 200px; */
     grid-area: header-row1-section-2-1;
   }
 
-  .header1-row1-section-01 a,
   .header1-row1-section-02 a {
     color: hsla(0, 0%, 100%, 0.6);
+    padding: 7px;
   }
 
   .header1-row1-section-01 a:hover,
@@ -727,7 +719,7 @@ footer {
     grid-column: 1/2;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 800px 1000px 800px 920px 1003px;
+    grid-template-rows: 690px 1000px 800px 920px 1003px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -739,11 +731,9 @@ footer {
 
   .icon-div {
     display: flex;
+    align-items: center;
     grid-area: icon-div;
-  }
-
-  .fa-search {
-    padding: 40%;
+    margin-left:15em;
   }
 
   .fa-bars {
@@ -758,7 +748,7 @@ footer {
     grid-template-rows: 200px 200px 200px;
     gap: 15px;
     grid-area: row-1;
-    margin-top: 155px;
+    margin-top: 80px;
     grid-template-areas:
       "row1-section-1"
       "row1-section-2"
@@ -803,16 +793,18 @@ footer {
     font-weight: 100;
   }
 
+
   .row-3 #row3-section-2 {
     display: flex;
     width: 25em;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    width: 21em;
+    justify-content: space-around;
   }
 
   #row3-section-2 > a {
-    font-size: 1rem;
+    font-size: .8rem;
     color: var(--orange);
     font-weight: 700;
     padding: 0 0.5em;
@@ -969,7 +961,7 @@ footer {
     display: grid;
     grid-row: 1/-1;
     grid-template-columns: 1fr;
-    grid-template-rows: 90px 60px;
+    grid-template-rows: 90px;
     width: 100%;
     background-color: #eee;
     grid-area: main-header;
@@ -1003,8 +995,8 @@ footer {
   .header-row1-section-2 {
     grid-row: 2/3;
     display: flex;
-    /* padding: 15px; */
     width: 100%;
+    height: 50px;
     grid-area: header-row1-section-2;
   }
 
@@ -1027,13 +1019,13 @@ footer {
     display: flex;
     width: 700px;
     justify-content: space-between;
-    padding: 40px;
+    padding: 10px;
   }
 
   .header1-row1-section-02 {
     display: flex;
     width: 200px;
-    margin-right: 2em;
+    margin-right: 5em;
     justify-content: space-between;
     grid-area: header-row1-section-2-1;
   }
@@ -1079,7 +1071,9 @@ footer {
   }
 
   .fa-search {
-    padding: 40%;
+    margin-left: 29em;
+    border: solid 1px lightgray;
+    padding:15px;
   }
 
   .fa-bars {
@@ -1099,12 +1093,7 @@ footer {
       "row1-section-1 row1-section-3";
   }
 
-  .header-row1-section-00 {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--black);
-    font-size: 0.8rem;
-  }
+ 
 
   .row-1 {
     display: grid;
@@ -1113,11 +1102,20 @@ footer {
     grid-template-rows: repeat(2, auto);
     gap: 15px;
     grid-area: row-1;
-    margin-top: 150px;
+    margin-top: 70px;
     grid-template-areas:
       "row1-section-1 row1-section-2 "
       "row1-section-1 row1-section-3";
   }
+
+
+  .header-row1-section-00 {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black);
+    font-size: 0.8rem;
+  }
+  
 
   .row-2 {
     display: grid;
@@ -1153,17 +1151,16 @@ footer {
 } */
   .row-3 #row3-section-2 {
     display: flex;
-    width: 25em;
     flex-direction: row;
     justify-content: flex-end;
+    margin-right: 2em;
     align-items: center;
   }
 
   #row3-section-2 > a {
-    font-size: 1rem;
+    font-size: .8rem;
     color: var(--orange);
     font-weight: 700;
-    padding: 0 0.5em;
     border-right: 2px solid var(--orange);
   }
 
