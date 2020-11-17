@@ -194,15 +194,14 @@ align-items: flex-end;
 
 
 
-
 .row-2 {
   display: grid;
   grid-row: 2/3;
-  grid-template-rows: 30px  repeat(8, 150px);
-  color: white;
+  grid-template-rows: 30px  repeat(8, 100px);
   font-size: 1.2rem;
   grid-gap: 15px;
   grid-area: row-2;
+  padding:5px;
   grid-template-areas:
     "row2-section-1"
     "row2-section-2"
@@ -215,9 +214,6 @@ align-items: flex-end;
     "row2-section-9";
 }
 
-.row-2 > div {
-  background-color: var(--grey);
-}
 
 .row2-section-1 {
   display: grid;
@@ -230,49 +226,45 @@ align-items: flex-end;
   grid-area: row2-section-1;
 }
 
-.row2-section-2 {
-  background-size: cover;
-  width:10px;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/06/ABN-ROBOT-EDITORIAL-540x270.jpg");
-}
-
-.row2-section-3 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/12min-540x270.jpeg");
-}
-
-.row2-section-4 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/transparency-410x270.jpg");}
-
-.row2-section-5 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/Untitled-design-2020-11-17T120921.079-516x270.png");}
-
-.row2-section-6 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/tesla-nand-flash-memory-nhtsa-error-car-future-ev-sad-failure-nvidia-tegra-480x270.jpg"); ;}  
-.row2-section-7 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/header-image-Blizzard-announces-World-of-Warcraft-will-run-natively-on-Apple-Silicon-from-day-one-516x270.png");}
-
-.row2-section-8 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/Em7uJudUYAEg_in-e1605608069461-513x270.jpeg");}
-
+.row2-section-2,
+.row2-section-3,
+.row2-section-4,
+.row2-section-5,
+.row2-section-6,
+.row2-section-7,
+.row2-section-8,
 .row2-section-9 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/pablo-submarine-escobar-drugs-electric-columbian-seize-usdea-480x270.jpg");
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 7em 13em;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "row-image row-text";
 }
 
+.row-image {
+  grid-column: 1/2;
+  width: 7em;
+  height: 5em;
+  grid-area: row-image;
+}
 
+.row-text {
+  color: black;
+  grid-column: 2/4;
+  padding: .5em;
+  grid-area: row-text;
+}
+
+.row-text :nth-child(1) {
+font-weight: bold;
+font-size: .8em;
+}
+
+.row-text :nth-child(2) {
+  color: lightgray;
+  font-size: .8em;
+}
 
 
 .row3-section-3 > div > img,
@@ -281,8 +273,6 @@ align-items: flex-end;
 .row3-section-6 > div > img  {
   width:10em;
 }
-
-
 
 .row5-section-1-5 a {
   display: flex;
