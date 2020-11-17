@@ -189,10 +189,6 @@ a {
 }
 
 
-
-
-
-
 .row-2 {
   display: grid;
   grid-row: 2/3;
@@ -264,10 +260,6 @@ font-size: .8em;
   color: lightgray;
   font-size: .8em;
 }
-
-
-
-
 
 
 .row3-section-3 > div > img,
@@ -522,28 +514,43 @@ font-size: .8em;
   margin-bottom: 2em;
 }
 .elon-desc {
-  color: #f42;
   background-color: rgb(236, 219, 216);
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
 }
+.elon-desc * {
+  color: #f42;
+}
 
+.elon-desc > a >p {
+  font-weight: bold;
+  padding-left: 0.5em;
+}
 
-.elon-img > img{
+.elon-desc > h2 {
+  padding-left: 0.5em;
+}
+
+.elon-img > a > img{
   width: 116px;
   height: 96px;
   justify-self: flex-end;
 }
 
-.hardfork-desc > ul > li {
+.elon-desc > a:hover {
+  text-decoration: underline;
+}
+
+.hardfork-list > li {
   line-height: 1.6;
+  color: #aaa;
   margin-bottom: 1em;
   list-style: circle;
   border-bottom: 1px solid lightgrey;
-
 }
+
 
 .row4-section-2 {
   display: grid;
