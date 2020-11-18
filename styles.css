@@ -20,15 +20,13 @@ html {
 }
 
 body {
-  width: 414px;
+  max-width: 460px;
   font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
   display: grid;
   grid-template-rows: 30px 1fr 60px;
-
-  /* row-gap: 15px; */
   margin: 0.5em;
   grid-template-areas:
     "main-header"
@@ -130,9 +128,11 @@ a {
 
 .row-1 {
   display: grid;
+  position: absolute;
+  margin-top: 2em;
   grid-column: 1/2;
   grid-row: 1/2;
-  grid-template-rows:  15em 15em 15em;
+  grid-template-rows: 15em 15em 15em;
   gap: 15px;
   grid-area: row-1;
   grid-template-areas:
@@ -159,11 +159,14 @@ a {
   
  .row1-section-1 {
   grid-row: 1/2;
-  padding:15px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/transparency-796x524.jpg"); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   grid-area: row1-section-1;
 } 
 
@@ -173,6 +176,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/Untitled-design-2020-11-17T120921.079-796x417.png");
   grid-area: row1-section-2;
 }
@@ -183,7 +189,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: var(--grey);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/image-796x417.png");
   grid-area: row1-section-3;
 }
@@ -192,11 +200,13 @@ a {
 .row-2 {
   display: grid;
   grid-row: 2/3;
+  position: absolute;
+  margin-top: 42em;
   grid-template-rows: 30px  repeat(8, 100px);
   font-size: 1.2rem;
   grid-gap: 15px;
   grid-area: row-2;
-  padding:5px;
+  padding: 5px;
   grid-template-areas:
     "row2-section-1"
     "row2-section-2"
@@ -895,11 +905,7 @@ footer {
       "row2-section-8 row2-section-9  . ";
   }
 
-  #row2-section-1 {
-    display: flex;
-    height: 100px;
-  }
-
+ 
   .row-3 {
     display: grid;
     grid-row: 3/4;
