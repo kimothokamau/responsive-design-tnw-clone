@@ -454,7 +454,9 @@ font-size: .8em;
 .row-4 {
   display: grid;
   grid-row: 4/5;
-  grid-template-rows: repeat(9, 2000px);
+  position: absolute;
+  margin-top: 120em;
+  grid-template-rows: repeat(9, 800px);
   gap: 15px;
   background-color: white;
   grid-area: row-4;
@@ -481,30 +483,34 @@ font-size: .8em;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
-  width: 578px;
+  height: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.row4-section-1 > h1 {
+.row-4  h1 {
   color: #f42;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-}
-
-.hardfork-card > * {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: white;
-  font-size: 1.2rem;
-  margin-left: 0.4em;
   margin-bottom: 0.5em;
 }
 
-.hardfork-card > p {
-  font-size: 1.4rem;
-  font-weight: bolder
+.hardfork-card * {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: white;
+  padding-left: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+.hardfork-card  p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.hardfork-card a:hover {
+  text-decoration: underline;
 }
 
 .author {
@@ -534,9 +540,10 @@ font-size: .8em;
   color: #f42;
 }
 
-.elon-desc > a >p {
+.elon-desc > a > p {
   font-weight: bold;
   padding-left: 0.5em;
+  padding-top: 0.5em;
 }
 
 .elon-desc > h2 {
@@ -553,10 +560,11 @@ font-size: .8em;
   text-decoration: underline;
 }
 
-.hardfork-list > li {
+.hardfork-list li {
   line-height: 1.6;
+  list-style-type: disc;
   color: #aaa;
-  margin-bottom: 1em;
+  margin: 0 0 1em 1em;
   list-style: circle;
   border-bottom: 1px solid lightgrey;
 }
