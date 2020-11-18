@@ -32,7 +32,7 @@ body {
   grid-template-areas:
     "main-header"
     "row-section"
-    "footer";
+    "main-footer";
 }
 
 .main-header {
@@ -743,11 +743,12 @@ font-size: .8em;
   grid-area: row5-section-9;
 }
 
-footer {
+.main-footer {
   grid-row: 3/4;
+  padding-top: 40px;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-area: footer;
+  grid-area: main-footer;
   grid-template-areas:
     "footer-section1"
     "footer-section3";
