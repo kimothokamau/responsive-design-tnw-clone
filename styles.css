@@ -12,6 +12,8 @@
   --pink: #faaea0;
   --white: #fff;
   --black: #000;
+  --light-orange: rgba(255,68,34,.08);
+  --lighter-orange: rgba(237, 233, 232);
 }
 
 html {
@@ -29,6 +31,7 @@ body {
   grid-template-rows: 50px 1fr 300px;
   row-gap: 15px;
   margin: 0.5em;
+  font-family: 'Roboto', sans-serif;
   grid-template-areas:
     "main-header"
     "row-section"
@@ -351,10 +354,8 @@ font-size: .8em;
 
 .row-3 {
   display: grid;
-  /* position: absolute;
-  margin-top: 100em; */
   grid-row: 3/4;
-  grid-template-rows: 50px 100px 250px 250px 250px;
+  grid-template-rows: 120px 100px 250px 250px 250px;
   grid-gap: 15px;
   padding: 2em 0;
   background-color: white;
@@ -363,8 +364,7 @@ font-size: .8em;
     "row3-section-1"
     "row3-section-2"
     "row3-section-3"
-    "row3-section-4"
-    "row3-section-5";
+    "row3-section-4";
 }
 
 
@@ -375,20 +375,31 @@ font-size: .8em;
   color: var(--orange);
   background-color: var(--white);
   grid-area: row3-section-1;
-  margin-bottom: 20px;
-  padding-bottom: 3em;
+  justify-content: space-between;
 }
 
-#row3-section-1 a {
+.row3-section-1-a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.row3-section-1 a {
   color: var(--orange);
 }
 
-#row3-section-2 {
+.row3-section-1 a:hover {
+  color: var(--black);
+}
+
+.row3-section-1-b a {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.row3-section-2 {
   display: flex;
   flex-direction: column;
-  justify-items: flex-start;
-  justify-content: flex-start;
-  grid-template-rows: repeat(3, auto);
   grid-row: 2/3;
   background-color: var(--white);
   grid-area: row3-section-2;
@@ -398,6 +409,68 @@ font-size: .8em;
   font-size: 1.2rem;
   color: var(--orange);
 }
+
+.row3-sec2-title {
+  background-color: var(--orange);
+  color: white;
+  font-weight: 500;
+  height: 200px;
+  padding: 1em 0 1em 0;
+}
+
+.row3-sec2-funding {
+  background-color: var(--light-orange);
+  padding: 1em 0 1em 0;
+}
+
+.row3-sec2-funding > img {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  top: -55px;
+  left: -80px;
+}
+
+.row3-sec2-funding :nth-child(2) {
+  font-weight: 500;
+}
+
+.row3-sec2-funding :nth-child(3) {
+  font-weight: normal;
+  color: lightgrey;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+
+
+.social-funding {
+  background-color: var(--lighter-orange);
+  
+}
+
+.row3-sec2-title,
+.row3-sec2-funding {
+  padding-left: 6em;
+}
+
+.social-funding p {
+  padding: 1.5em 0 0 0.5em;
+  color: #555;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.social-funding :nth-child(2) {
+  border-bottom: 1px solid var(--orange);
+  padding-bottom: 1.5em;
+}
+
+.social-funding :nth-child(3) {
+  padding: 2em 0 2em 0.5em;
+}
+
+
 
 .button {
   color: var(--orange);
