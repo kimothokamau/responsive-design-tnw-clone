@@ -116,7 +116,7 @@ a {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
-  grid-template-rows: 48em 4em 60em 120em 112em;
+  grid-template-rows: 48em 4em 62em 110em 112em;
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -304,22 +304,6 @@ font-size: .8em;
   font-weight: 700;
 }
 
-.row5-section-1-a > a {
-  background-color: var(--white);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--orange) !important;
-}
-
-.row5-section-1-b > a {
-  background-color: var(--white);
-  font-weight: 700;
-  color: var(--orange) !important;
-}
-
-#row2-section-1 > a {
-  color: var(--orange);
-}
 
 .row2-section-2 {
   display: grid;
@@ -622,9 +606,9 @@ font-size: .8em;
 .row-5 {
   display: grid;
   grid-row: 5/6;
-  grid-template-rows: 50px 200px 200px 200px 200px 200px 200px 200px 200px;
+  margin-top: 530em;
+  grid-template-rows: 50px 100px 100px 100px 100px 100px 100px 100px 100px;
   font-size: 1rem;
-  gap: 15px;
   background-color: white;
   grid-area: row-5;
   grid-template-areas:
@@ -639,6 +623,22 @@ font-size: .8em;
     "row5-section-9";
 }
 
+
+.row5-section-2,
+.row5-section-3,
+.row5-section-4,
+.row5-section-5,
+.row5-section-6,
+.row5-section-7,
+.row5-section-8,
+.row5-section-9 {
+  display: grid;
+  justify-items: start;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "row5-image row5-text";
+}
+
 .row5-section-1 {
   display: flex;
   background-color: white !important;
@@ -646,9 +646,54 @@ font-size: .8em;
   align-items: center;
 }
 
-.row-5 > div {
-  background-color: var(--grey);
+.row5-section-1-a > a {
+  background-color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange);
 }
+
+.row5-section-1-b > a {
+  background-color: var(--white);
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.row5-image{
+  grid-column: 1/2;
+  width: 7em;
+  height: 5em;
+  grid-area: row5-image;
+}
+.row5-text{
+  color: black;
+  grid-column: 2/4;
+  padding: .5em;
+  grid-area: row5-text;
+  display: flex;
+  flex-direction: column;
+}
+.row5-price{
+  display: flex;
+  padding:.5em;
+}
+
+.row5-text :nth-child(1){
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.row5-price :nth-child(1){
+  text-decoration: line-through;
+  color:grey;
+  font-weight: 200;
+}
+
+
+.row5-price :nth-child(2){
+font-size: .8em;
+}
+
 
 .row5-section-1-5 {
   display: grid;
@@ -661,6 +706,7 @@ font-size: .8em;
   grid-row: 2/3;
   grid-area: row5-section-2;
 }
+
 
 .row5-section-3 {
   display: grid;
