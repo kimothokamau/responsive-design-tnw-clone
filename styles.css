@@ -423,12 +423,11 @@ font-size: .8em;
   padding: 1em 0 1em 0;
 }
 
-.row3-sec2-funding > img {
+.row3-section-2 > img {
   width: 56px;
-  height: 56px;
-  position: relative;
-  top: -55px;
-  left: -80px;
+  height: auto;
+  position: absolute;
+  margin: 0.5em;
 }
 
 .row3-sec2-funding :nth-child(2) {
