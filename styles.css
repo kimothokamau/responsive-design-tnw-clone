@@ -26,7 +26,8 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 30px 1fr 60px;
+  grid-template-rows: 50px 1fr 300px;
+  row-gap: 15px;
   margin: 0.5em;
   grid-template-areas:
     "main-header"
@@ -112,11 +113,11 @@ a {
   display: none;
 }
 
-.rows-section {
+.row-section {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
-  grid-template-rows: 48em 4em 62em 110em 112em;
+  grid-template-rows: 50em 50em 50em 400em 50em;
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -128,9 +129,6 @@ a {
 
 .row-1 {
   display: grid;
-  position: absolute;
-  margin-top: 2em;
-  grid-column: 1/2;
   grid-row: 1/2;
   grid-template-rows: 15em 15em 15em;
   gap: 15px;
@@ -200,8 +198,6 @@ a {
 .row-2 {
   display: grid;
   grid-row: 2/3;
-  position: absolute;
-  margin-top: 42em;
   grid-template-rows: 30px  repeat(8, 100px);
   font-size: 1.2rem;
   grid-gap: 15px;
@@ -355,9 +351,10 @@ font-size: .8em;
 
 .row-3 {
   display: grid;
+  /* position: absolute;
+  margin-top: 100em; */
   grid-row: 3/4;
-  grid-template-rows: 4em 4em 250px 250px 250px;
-  font-size: 1rem;
+  grid-template-rows: 50px 100px 250px 250px 250px;
   grid-gap: 15px;
   padding: 2em 0;
   background-color: white;
@@ -370,22 +367,19 @@ font-size: .8em;
     "row3-section-5";
 }
 
-.row-3 > div {
-  background-color: var(--grey);
-}
 
-#row3-section-1 {
-  display: grid;
+.row3-section-1 {
+  display: flex;
+  flex-direction: column;
   grid-row: 1/2;
   color: var(--orange);
   background-color: var(--white);
-  font-size: 1.5rem;
-  font-weight: 700;
-  align-items: center;
   grid-area: row3-section-1;
+  margin-bottom: 20px;
+  padding-bottom: 3em;
 }
 
-#row3-section-1 > a {
+#row3-section-1 a {
   color: var(--orange);
 }
 
@@ -438,8 +432,8 @@ font-size: .8em;
 .row-4 {
   display: grid;
   grid-row: 4/5;
-  position: absolute;
-  margin-top: 120em;
+  /* position: absolute;
+  margin-top: 180em; */
   grid-template-rows: repeat(9, 800px);
   gap: 15px;
   background-color: white;
@@ -606,7 +600,6 @@ font-size: .8em;
 .row-5 {
   display: grid;
   grid-row: 5/6;
-  margin-top: 530em;
   grid-template-rows: 50px 100px 100px 100px 100px 100px 100px 100px 100px;
   font-size: 1rem;
   background-color: white;
@@ -753,7 +746,7 @@ font-size: .8em;
 footer {
   grid-row: 3/4;
   display: grid;
-  grid-template-rows: 80px 40px;
+  grid-template-rows: 1fr 1fr;
   grid-area: footer;
   grid-template-areas:
     "footer-section1"
@@ -762,11 +755,12 @@ footer {
 
 .footer-section1 {
   grid-row: 1/2;
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
-  height: 7em;
   background-color: #3f3f3f;
+  grid-area: footer-section1;
 }
 
 .footer-section2 {
@@ -775,13 +769,13 @@ footer {
 }
 
 .footer-section3 {
-  height: 150px;
   background-color: var(--black);
   display: grid;
   padding: 15px;
   color: white;
   place-items: center center;
   text-align: center;
+  grid-area: footer-section3;
 }
 
 @media screen and (min-width: 768px) {
