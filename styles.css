@@ -911,8 +911,8 @@ a:hover {
   }
 
   .row5-section-1-b > a {
-    font-size: 1rem !important;
-    font-weight: 100 !important;
+    font-size: 1rem;
+    font-weight: 100;
     margin-right: 1.5em;
   }
 
@@ -1208,63 +1208,6 @@ a:hover {
     display: flex;
     flex-direction: column;
   }
-  
-
-  /* .row5-section-2 {
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    grid-area: row5-section-2;
-  }
-
-  .row5-section-3 {
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    grid-area: row5-section-3;
-  }
-
-  .row5-section-4 {
-    display: grid;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    grid-area: row5-section-4;
-  }
-
-  .row5-section-5 {
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 3/4;
-    grid-area: row5-section-5;
-  }
-
-  .row5-section-6 {
-    display: grid;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    grid-area: row5-section-6;
-  }
-
-  .row5-section-7 {
-    display: grid;
-    grid-column: 3/4;
-    grid-row: 3/4;
-    grid-area: row5-section-7;
-  }
-
-  .row5-section-8 {
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 5/6;
-    grid-area: row5-section-8;
-  }
-
-  .row5-section-9 {
-    display: grid;
-    grid-column: 3/4;
-    grid-row: 5/6;
-    grid-area: row5-section-9;
-  } */
 
   .footer-section1 {
     margin-top: 1em;
@@ -1272,20 +1215,7 @@ a:hover {
 }
 
 /* PC LAYOUT (portrait and landscape) */
-@media screen and (min-width: 1024px) {
-  body {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .wrapper {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-      "main-header"
-      "row-section"
-      "footer";
-  }
+@media screen and (min-width: 1025px) {
 
   .main-header {
     display: grid;
@@ -1388,12 +1318,11 @@ a:hover {
     grid-row: 2/3;
   }
 
-  .rows-section {
+  .row-section {
     display: grid;
-    grid-column: 1/2;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 700px 270px 700px 600px;
+    grid-template-rows: 500px 600px 270px 2100px 450px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1424,10 +1353,10 @@ a:hover {
     display: grid;
     grid-row: 1/2;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(2, auto);
-    gap: 15px;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
     grid-area: row-1;
-    margin-top: 70px;
+    margin-top: 40px;
     grid-template-areas:
       "row1-section-1 row1-section-2 "
       "row1-section-1 row1-section-3";
@@ -1444,15 +1373,32 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 80px 300px 300px;
+    grid-template-rows: 50px 1fr 1fr;
     grid-area: row-2;
     grid-template-areas:
-      "row2-section-1 row2-section-1 row2-section-1 row2-section-1"
+      "row2-section-1 . . ." 
       "row2-section-2 row2-section-3 row2-section-4 row2-section-5"
       "row2-section-6 row2-section-7 row2-section-8 row2-section-9";
   }
 
-  #row2-section-1 {
+  .row2-section-2,
+  .row2-section-3,
+  .row2-section-4,
+  .row2-section-5,
+  .row2-section-6,
+  .row2-section-7,
+  .row2-section-8,
+  .row2-section-9 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row-image {
+    width: 13em;
+    height: 9em;
+  }
+
+  .row2-section-1 {
     display: flex;
     height: 100px;
   }
@@ -1468,10 +1414,6 @@ a:hover {
       "row3-section-3 row3-section-4  row3-section-5 row3-section-6";
   }
 
-  /* .row-3 > div {
-  background-color: var(--grey);
-  height:100%;
-} */
   .row-3 #row3-section-2 {
     display: flex;
     flex-direction: row;
