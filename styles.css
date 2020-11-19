@@ -786,7 +786,6 @@ a:hover {
 
 .main-footer {
   grid-row: 3/4;
-  padding-top: 40px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-area: main-footer;
@@ -1308,7 +1307,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 600px 420px 800px 800px;
+    grid-template-rows: 500px 600px 420px 2400px 1100px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
