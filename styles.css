@@ -944,7 +944,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 25px;
-    grid-template-rows: 580px 720px 420px 3500px 600px;
+    grid-template-rows: 580px 720px 420px 3200px 650px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1162,30 +1162,55 @@ a:hover {
   .row-5 {
     display: grid;
     grid-row: 5/6;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 200px 250px 250px;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px repeat(3, 1fr);
     grid-area: row-5;
     grid-template-areas:
-      "row5-section-1   row5-section-1"
-      "row5-section-2   row5-section-3"
-      "row5-section-4   row5-section-5"
-      "row5-section-6   row5-section-7"
-      "row5-section-8   row5-section-9";
+      "row5-section-1   row5-section-1 row5-section-1"
+      "row5-section-2   row5-section-3 row5-section-4"
+      "row5-section-5   row5-section-6 row5-section-7"
+      "row5-section-8   row5-section-9 .";
+      }
+
+  .row5-section-2,
+  .row5-section-3,
+  .row5-section-4,
+  .row5-section-5,
+  .row5-section-6,
+  .row5-section-7,
+  .row5-section-8,
+  .row5-section-9 {
+   display: flex;
+   flex-direction: column;
   }
 
   .row5-section-1 {
-    grid-column: 1/4 !important;
-    background-color: white !important;
-    grid-row: 1/2 !important;
-    display: flex !important;
-    grid-area: row5-section-1 !important;
+    grid-column: 1/4 ;
+    background-color: white ;
+    grid-row: 1/2 ;
+    display: flex ;
+    grid-area: row5-section-1;
     justify-content: space-between;
-    height: 50px !important;
+    height: 50px ;
     align-items: center;
   }
 
-  .row5-section-2 {
+  .row5-image {
+    width: 14em;
+    height: 9em;
+  }
+  
+  .row5-text {
+    color: black;
+    grid-column: 2/4;
+    padding: 0.5em;
+    grid-area: row5-text;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  /* .row5-section-2 {
     display: grid;
     grid-column: 1/2;
     grid-row: 2/3;
@@ -1239,7 +1264,7 @@ a:hover {
     grid-column: 3/4;
     grid-row: 5/6;
     grid-area: row5-section-9;
-  }
+  } */
 
   .footer-section1 {
     margin-top: 1em;
