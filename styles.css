@@ -22,15 +22,15 @@ html {
 }
 
 body {
-  max-width: 460px;
   font-family: 'Roboto', sans-serif;
+  margin: 0 1em 0 1em;
 }
 
 .wrapper {
   display: grid;
   grid-template-rows: 50px 1fr 300px;
   row-gap: 15px;
-  margin: 0.5em;
+
   width: fit-content;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
@@ -1322,7 +1322,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 600px 420px 2100px 450px;
+    grid-template-rows: 500px 600px 420px 2800px 450px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1443,12 +1443,11 @@ a:hover {
 
 
 
-
   .row-4 {
     display: grid;
     grid-row: 4/5;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 400px);
+    grid-template-rows: repeat(3, 1fr);
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
@@ -1457,10 +1456,6 @@ a:hover {
       " row4-section-7  row4-section-8  row4-section-9";
   }
 
-  .row-4 > div {
-    background-color: var(--grey);
-    height: 100%;
-  }
 
   .row-5 {
     display: grid;
