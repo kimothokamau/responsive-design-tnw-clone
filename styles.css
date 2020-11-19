@@ -28,7 +28,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 1% 97% 5%;
+  grid-template-rows: 1% 97% 6%;
   row-gap: 15px;
   width: 98%;
   margin-left: auto;
@@ -1311,7 +1311,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 600px 420px 2400px 1400px;
+    grid-template-rows: 500px 600px 420px 2200px 1070px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1436,7 +1436,7 @@ a:hover {
     display: grid;
     grid-row: 5/6;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px repeat(3, 1fr);
+    grid-template-rows: 50px repeat(3, 350px);
     gap: 15px;
     grid-area: row-5;
     grid-template-areas:
@@ -1525,5 +1525,38 @@ a:hover {
     grid-column: 2/3;
     grid-row: 4/5;
     grid-area: row5-section-9;
+  }
+
+  .main-footer {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-area: main-footer;
+    grid-template-areas:
+      "footer-section1"
+      "footer-section3";
+  }
+
+  .footer-section1 {
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #3f3f3f;
+    grid-area: footer-section1;
+  }
+
+  .footer-section2 {
+    font-size: 0.75em;
+  }
+
+  .footer-section3 {
+    background-color: var(--black);
+    display: grid;
+    padding: 15px;
+    color: white;
+    place-items: center center;
+    text-align: center;
+    grid-area: footer-section3;
   }
 }
