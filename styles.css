@@ -30,7 +30,7 @@ body {
   display: grid;
   grid-template-rows: 5% 85% 10%;
   row-gap: 15px;
-  width: fit-content;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
     "main-header"
@@ -388,13 +388,26 @@ a:hover {
   color: var(--orange);
 }
 
-.row3-section-1 a:hover {
-  color: var(--black);
-}
-
 .row3-section-1-b a {
   display: block;
   margin-bottom: 1em;
+}
+
+.row5-section-1-a > a {
+  background-color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.row5-section-1-b > a {
+  background-color: var(--white);
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.row3-section-1 a:hover {
+  color: var(--black);
 }
 
 .row3-section-2 {
@@ -501,8 +514,6 @@ a:hover {
     "row4-section-8";
 }
 
-
-
 .hardfork-card {
   background-image: url(./asset/hardfork-img.jpeg);
   background-size: cover;
@@ -589,7 +600,6 @@ a:hover {
 
 .hardfork-list li {
   line-height: 1.6;
-  list-style-type: disc;
   color: #aaa;
   margin: 0 0 1em 1em;
   list-style: circle;
@@ -679,19 +689,6 @@ a:hover {
   background-color: white;
   justify-content: space-between;
   align-items: center;
-}
-
-.row5-section-1-a > a {
-  background-color: var(--white);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--orange);
-}
-
-.row5-section-1-b > a {
-  background-color: var(--white);
-  font-weight: 700;
-  color: var(--orange);
 }
 
 .row5-image {
@@ -903,6 +900,11 @@ a:hover {
     margin-right: 1.5em;
   }
 
+  .row3-section-1-b a {
+    border-right: 1px solid var(--orange);
+    padding: 0 0.5em 0 0.5em;
+  }
+
   .row5-section-1 > div > a {
     color: var(--orange);
     font-size: 1.5rem;
@@ -1089,11 +1091,6 @@ a:hover {
   .row3-section-1-b {
     display: flex;
     justify-content: flex-start;
-  }
-
-  .row3-section-1-b a {
-    border-right: 1px solid var(--orange);
-    padding: 0 0.5em 0 0.5em;
   }
 
   .row3-section-1-b :nth-child(1) {
@@ -1288,6 +1285,11 @@ a:hover {
     color: hsla(0, 0%, 100%, 0.6);
   }
 
+  .row3-section-1-b a {
+    border-right: 1px solid var(--orange);
+    padding: 0 0.5em 0 0.5em;
+  }
+
   .header1-row1-section-01 a:hover,
   .header1-row1-section-02 a:hover {
     color: white;
@@ -1415,11 +1417,6 @@ a:hover {
     display: flex;
   }
 
-  .row3-section-1-b a {
-    border-right: 1px solid var(--orange);
-    padding: 0 0.5em 0 0.5em;
-  }
-
   .row-4 {
     display: grid;
     grid-row: 4/5;
@@ -1432,7 +1429,6 @@ a:hover {
       "row4-section-4  row4-section-5  row4-section-6"
       "row4-section-7  row4-section-8  row4-section-9";
   }
-
 
   .row-5 {
     display: grid;
@@ -1477,11 +1473,9 @@ a:hover {
     color: var(--orange);
   }
 
-
   .row5-section-1-b {
     display: flex;
   }
-
 
   .row5-section-2 {
     grid-column: 1/2;
