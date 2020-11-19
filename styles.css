@@ -1407,7 +1407,7 @@ a:hover {
     display: grid;
     grid-row: 3/4;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px 150px;
+    grid-template-rows: 50px 150px;
     grid-area: row-3;
     grid-template-areas:
       "row3-section-1 row3-section-1  row3-section-1 "
@@ -1415,19 +1415,20 @@ a:hover {
   }
   
   .row3-section-1 {
-    display: grid;
+    display: flex;
+    align-items: center;
     grid-column: 1/2;
-     grid-template-columns: repeat(2, 1fr);
      grid-area: row3-section-1; 
-     grid-template-area: 
-     "row3-section-1-a  row3-section-1-b";
+     flex-direction: row;
   }
   .row3-section-1-a{
     grid-column: 1/2;
+    color: var(--orange)
     grid-area: row3-section-1-a;
   }
   
   .row3-section-1-b {
+    display: flex;
     grid-column: 2/3;
     grid-area: row3-section-1-a;
   }
