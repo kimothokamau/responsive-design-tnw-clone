@@ -30,7 +30,6 @@ body {
   display: grid;
   grid-template-rows: 50px 1fr 300px;
   row-gap: 15px;
-
   width: fit-content;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
@@ -688,7 +687,7 @@ a:hover {
 
 .row5-section-1 {
   display: flex;
-  background-color: white !important;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
 }
@@ -1079,7 +1078,6 @@ a:hover {
     color: black;
   }
 
-
   .row-3 {
     display: grid;
     grid-row: 3/4;
@@ -1156,7 +1154,7 @@ a:hover {
       "row4-section-3  row4-section-4"
       "row4-section-5  row4-section-6"
       "row4-section-7  row4-section-8"
-      "row4-section-9  ."
+      "row4-section-9  .";
   }
 
   .row-5 {
@@ -1170,7 +1168,7 @@ a:hover {
       "row5-section-2   row5-section-3 row5-section-4"
       "row5-section-5   row5-section-6 row5-section-7"
       "row5-section-8   row5-section-9 .";
-      }
+  }
 
   .row5-section-2,
   .row5-section-3,
@@ -1180,18 +1178,18 @@ a:hover {
   .row5-section-7,
   .row5-section-8,
   .row5-section-9 {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .row5-section-1 {
-    grid-column: 1/4 ;
-    background-color: white ;
-    grid-row: 1/2 ;
-    display: flex ;
+    grid-column: 1/4;
+    background-color: white;
+    grid-row: 1/2;
+    display: flex;
     grid-area: row5-section-1;
     justify-content: space-between;
-    height: 50px ;
+    height: 50px;
     align-items: center;
   }
 
@@ -1199,7 +1197,7 @@ a:hover {
     width: 14em;
     height: 9em;
   }
-  
+
   .row5-text {
     color: black;
     grid-column: 2/4;
@@ -1216,7 +1214,6 @@ a:hover {
 
 /* PC LAYOUT (portrait and landscape) */
 @media screen and (min-width: 1025px) {
-
   .main-header {
     display: grid;
     grid-row: 1/-1;
@@ -1322,7 +1319,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 600px 420px 2800px 450px;
+    grid-template-rows: 500px 600px 420px 2800px 1100px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1376,7 +1373,7 @@ a:hover {
     grid-template-rows: 50px 1fr 1fr;
     grid-area: row-2;
     grid-template-areas:
-      "row2-section-1 . . ." 
+      "row2-section-1 . . ."
       "row2-section-2 row2-section-3 row2-section-4 row2-section-5"
       "row2-section-6 row2-section-7 row2-section-8 row2-section-9";
   }
@@ -1413,35 +1410,27 @@ a:hover {
       "row3-section-1 row3-section-1  row3-section-1 "
       "row3-section-2 row3-section-3  row3-section-4 ";
   }
-  
+
   .row3-section-1 {
     display: flex;
     align-items: center;
     grid-column: 1/2;
-     grid-area: row3-section-1; 
-     flex-direction: row;
+    grid-area: row3-section-1;
+    flex-direction: row;
   }
-  .row3-section-1-a{
-    grid-column: 1/2;
-    color: var(--orange)
-    grid-area: row3-section-1-a;
+
+  .row3-section-1-a {
+    color: var(--orange);
   }
-  
+
   .row3-section-1-b {
     display: flex;
-    grid-column: 2/3;
-    grid-area: row3-section-1-a;
   }
+
   .row3-section-1-b a {
     border-right: 1px solid var(--orange);
     padding: 0 0.5em 0 0.5em;
   }
-
-
-
-
-
-
 
   .row-4 {
     display: grid;
@@ -1456,87 +1445,100 @@ a:hover {
       " row4-section-7  row4-section-8  row4-section-9";
   }
 
-
   .row-5 {
     display: grid;
     grid-row: 5/6;
-    grid-column: 1/-1;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 250px 250px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px repeat(3, 1fr);
     gap: 15px;
     grid-area: row-5;
     grid-template-areas:
-      "row5-section-1 row5-section-1 row5-section-1 row5-section-1"
-      "row5-section-2   row5-section-3  row5-section-4  row5-section-5"
-      "row5-section-6  row5-section-7  row5-section-8    row5-section-9";
+      "row5-section-1  row5-section-1  row5-section-1 "
+      "row5-section-2  row5-section-3 row5-section-4"
+      "row5-section-5  row5-section-6  row5-section-7 "
+      "row5-section-8  row5-section-9 . ";
   }
 
-  .row-5 > nav {
-    background-color: var(--grey);
-    height: 100%;
+  .row5-section-1 {
+    display: flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-area: row5-section-1;
   }
 
-  .row-5 .deals {
-    background-color: white;
+  .row5-section-2,
+  .row5-section-3,
+  .row5-section-4,
+  .row5-section-5,
+  .row5-section-6,
+  .row5-section-7,
+  .row5-section-8,
+  .row5-section-9 {
+    display: flex;
+    flex-direction: column;
   }
 
-  .row5-section-1-5 {
-    margin: 0 10px;
+  .row5-image {
+    width: 80%;
+    height: auto;
   }
+
+  .row5-section-1-a {
+    color: var(--orange);
+  }
+
+
+  .row5-section-1-b {
+    display: flex;
+  }
+
 
   .row5-section-2 {
-    display: grid;
     grid-column: 1/2;
     grid-row: 2/3;
     grid-area: row5-section-2;
   }
 
   .row5-section-3 {
-    display: grid;
     grid-column: 2/3;
     grid-row: 2/3;
     grid-area: row5-section-3;
   }
 
   .row5-section-4 {
-    display: grid;
     grid-column: 3/4;
     grid-row: 2/3;
     grid-area: row5-section-4;
   }
 
   .row5-section-5 {
-    display: grid;
-    grid-column: 4/5;
-    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-row: 3/4;
     grid-area: row5-section-5;
   }
 
   .row5-section-6 {
-    display: grid;
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 3/4;
     grid-area: row5-section-6;
   }
 
   .row5-section-7 {
-    display: grid;
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 3/4;
     grid-area: row5-section-7;
   }
 
   .row5-section-8 {
-    display: grid;
-    grid-column: 3/4;
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 4/5;
     grid-area: row5-section-8;
   }
 
   .row5-section-9 {
-    display: grid;
-    grid-column: 4/5;
-    grid-row: 3/4;
+    grid-column: 2/3;
+    grid-row: 4/5;
     grid-area: row5-section-9;
   }
 }
