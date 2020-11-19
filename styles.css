@@ -28,7 +28,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 50px 1fr 300px;
+  grid-template-rows: 5% 85% 10%;
   row-gap: 15px;
   width: fit-content;
   font-family: 'Roboto', sans-serif;
@@ -486,9 +486,6 @@ a:hover {
 .row-4 {
   display: grid;
   grid-row: 4/5;
-
-  /* position: absolute;
-  margin-top: 180em; */
   grid-template-rows: repeat(9, 800px);
   gap: 15px;
   background-color: white;
@@ -504,12 +501,7 @@ a:hover {
     "row4-section-8";
 }
 
-.row4-section-1 {
-  grid-row: 1/2;
-  grid-area: row4-section-1;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .hardfork-card {
   background-image: url(./asset/hardfork-img.jpeg);
@@ -604,50 +596,47 @@ a:hover {
   border-bottom: 1px solid lightgrey;
 }
 
+.row4-section-1 {
+  grid-row: 1/2;
+  grid-area: row4-section-1;
+}
+
 .row4-section-2 {
-  display: grid;
   grid-row: 2/3;
   grid-area: row4-section-2;
 }
 
 .row4-section-3 {
-  display: grid;
   grid-row: 3/4;
   grid-area: row4-section-3;
 }
 
 .row4-section-4 {
-  display: grid;
   grid-row: 4/5;
   grid-area: row4-section-4;
 }
 
 .row4-section-5 {
-  display: grid;
   grid-row: 5/6;
   grid-area: row4-section-5;
 }
 
 .row4-section-6 {
-  display: grid;
   grid-row: 6/7;
   grid-area: row4-section-6;
 }
 
 .row4-section-7 {
-  display: grid;
   grid-row: 7/8;
   grid-area: row4-section-7;
 }
 
 .row4-section-8 {
-  display: grid;
   grid-row: 8/9;
   grid-area: row4-section-8;
 }
 
 .row4-section-9 {
-  display: grid;
   grid-row: 9/10;
   grid-area: row4-section-9;
 }
@@ -1319,7 +1308,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 600px 420px 2800px 1100px;
+    grid-template-rows: 500px 600px 420px 800px 800px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1436,14 +1425,15 @@ a:hover {
     display: grid;
     grid-row: 4/5;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 770px);
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
-      "row4-section-1  row4-section-2  row4-section-3  "
-      " row4-section-4  row4-section-5  row4-section-6"
-      " row4-section-7  row4-section-8  row4-section-9";
+      "row4-section-1  row4-section-2  row4-section-3"
+      "row4-section-4  row4-section-5  row4-section-6"
+      "row4-section-7  row4-section-8  row4-section-9";
   }
+
 
   .row-5 {
     display: grid;
