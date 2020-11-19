@@ -31,6 +31,7 @@ body {
   grid-template-rows: 50px 1fr 300px;
   row-gap: 15px;
   margin: 0.5em;
+  width: fit-content;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
     "main-header"
@@ -831,7 +832,7 @@ a:hover {
   grid-area: footer-section3;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .main-header {
     display: grid;
     grid-row: 1/-1;
@@ -943,7 +944,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 25px;
-    grid-template-rows: 580px 720px 420px 2000px 600px;
+    grid-template-rows: 580px 720px 420px 3500px 600px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1146,19 +1147,16 @@ a:hover {
   .row-4 {
     display: grid;
     grid-row: 4/5;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 300px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
-      "row4-section-1  row4-section-2  row4-section-3  "
-      " row4-section-4  row4-section-5  row4-section-6"
-      " row4-section-7  row4-section-8  row4-section-9";
-  }
-
-  .row-4 > div {
-    background-color: var(--grey);
-    height: 100%;
+      "row4-section-1  row4-section-2"
+      "row4-section-3  row4-section-4"
+      "row4-section-5  row4-section-6"
+      "row4-section-7  row4-section-8"
+      "row4-section-9  ."
   }
 
   .row-5 {
