@@ -28,7 +28,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 1% 97% 6%;
+  grid-template-rows: 1% 98% 1%;
   row-gap: 15px;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
@@ -50,17 +50,22 @@ body {
 }
 
 .header-row-1 {
+  display: flex;
+  justify-content: space-between;
   grid-column: 1/-1;
   grid-row: 1/2;
-  grid-template-rows: 50px 10px;
+  grid-template-rows: 50px 100px;
   grid-area: header-row-1;
   grid-template-areas:
-    "header-row1-section-00"
-    "header-row1-section-2";
+    "header-row1-section-1  icon-div";
 }
 
 .header-row1-section-00 {
   display: none;
+}
+
+.header-row1-section-1 {
+  grid-area: header-row1-section-1;
 }
 
 .header-row1-section-2 {
@@ -125,7 +130,9 @@ a:hover {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
-  width: 100%;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
   grid-template-rows: 50em 50em 67em 400em 50em;
   grid-area: row-section;
   grid-template-areas:
@@ -139,6 +146,7 @@ a:hover {
 .row-1 {
   display: grid;
   grid-row: 1/2;
+  margin-top: 40px;
   grid-template-rows: 15em 15em 15em;
   gap: 15px;
   grid-area: row-1;
@@ -154,7 +162,7 @@ a:hover {
 
 .row-top > p {
   color: white;
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -173,14 +181,16 @@ a:hover {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/transparency-796x524.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   grid-area: row1-section-1;
 }
-
+.row1-logo {
+width: 12em;
+}
 .row1-section-2 {
   grid-row: 2/3;
   padding: 15px;
@@ -389,12 +399,6 @@ a:hover {
 .row5-section-1-a > a {
   background-color: var(--white);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--orange);
-}
-
-.row5-section-1-b > a {
-  background-color: var(--white);
   font-weight: 700;
   color: var(--orange);
 }
@@ -684,6 +688,11 @@ a:hover {
   align-items: center;
 }
 
+.row5-section-1-b {
+  color:var(--orange);
+  font-weight: 500;
+}
+
 .row5-image {
   grid-column: 1/2;
   width: 7em;
@@ -790,6 +799,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+  height: 100px;
   background-color: #3f3f3f;
   grid-area: footer-section1;
 }
@@ -802,6 +812,7 @@ a:hover {
 .footer-section3 {
   background-color: var(--black);
   display: grid;
+  height: 100px;
   padding: 15px;
   color: white;
   place-items: center center;
@@ -1390,7 +1401,7 @@ a:hover {
   }
 
   .row-image {
-    width: 21em;
+    width: 17em;
     height: 9em;
   }
 
@@ -1429,7 +1440,7 @@ a:hover {
   .row-4 {
     display: grid;
     grid-row: 4/5;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(3, 770px);
     gap: 15px;
     grid-area: row-4;
