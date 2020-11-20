@@ -24,14 +24,12 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0 1em 0 1em;
-  overflow:hidden;
 }
 
 .wrapper {
   display: grid;
   grid-template-rows: 1% 97% 6%;
   row-gap: 15px;
-  overflow:hidden;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
     "main-header"
@@ -127,9 +125,7 @@ a:hover {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   grid-template-rows: 50em 50em 67em 400em 50em;
   grid-area: row-section;
   grid-template-areas:
@@ -1223,21 +1219,26 @@ a:hover {
   .header-row-1 {
     display: grid;
     grid-row: 1/2;
+    grid-template-columns: 3% 97%;
     grid-template-rows: 40px 40px;
     grid-area: header-row-1;
     grid-template-areas:
-      "header-row1-section-00"
-      "header-row1-section-2";
+      "header-row1-section-1 header-row1-section-00"
+      "header-row1-section-2 header-row1-section-2";
   }
 
   .header-row1-section-00 {
     display: flex;
+    background-color: black;
     justify-content: space-between;
   }
 
 
   .header-row1-section-1 {
-    display: none;
+    grid-area: header-row1-section-1;
+    text-align: center;
+    background-color: black;
+    align-items: center;
   }
 
   .header-row1-section-2 {
@@ -1268,6 +1269,7 @@ a:hover {
   .header1-row1-section-01 {
     display: flex;
     align-items: center;
+    margin-left: 1em;
     width: 700px;
     justify-content: space-between;
     padding: 0 2em 0 1em;
