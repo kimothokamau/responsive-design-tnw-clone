@@ -28,7 +28,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 1% 98% 1%;
+  grid-template-rows: 10px 98% 1%;
   row-gap: 15px;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
@@ -56,16 +56,11 @@ body {
   grid-row: 1/2;
   grid-template-rows: 50px 100px;
   grid-area: header-row-1;
-  grid-template-areas:
-    "header-row1-section-1  icon-div";
+  grid-template-areas: "header-row1-section-1  icon-div";
 }
 
 .header-row1-section-00 {
   display: none;
-}
-
-.header-row1-section-1 {
-  grid-area: header-row1-section-1;
 }
 
 .header-row1-section-2 {
@@ -130,15 +125,10 @@ a:hover {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
-<<<<<<< HEAD
   width: 98%;
   margin-left: auto;
   margin-right: auto;
   grid-template-rows: 50em 50em 67em 400em 50em;
-=======
-  width: 100%;
-  grid-template-rows: 50em 50em 67em 400em 63em;
->>>>>>> 5413925e481496c0058ed3cbaed63fee4a73f38f
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -151,7 +141,7 @@ a:hover {
 .row-1 {
   display: grid;
   grid-row: 1/2;
-  margin-top: 40px;
+  margin-top: 50px;
   grid-template-rows: 15em 15em 15em;
   gap: 15px;
   grid-area: row-1;
@@ -193,9 +183,11 @@ a:hover {
   background-repeat: no-repeat;
   grid-area: row1-section-1;
 }
+
 .row1-logo {
-width: 12em;
+  width: 12em;
 }
+
 .row1-section-2 {
   grid-row: 2/3;
   padding: 15px;
@@ -694,7 +686,7 @@ width: 12em;
 }
 
 .row5-section-1-b {
-  color:var(--orange);
+  color: var(--orange);
   font-weight: 500;
 }
 
@@ -801,17 +793,12 @@ width: 12em;
 .footer-section1 {
   grid-row: 1/2;
   display: flex;
-  height: 120px;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-<<<<<<< HEAD
   height: 100px;
-  background-color: #3f3f3f;
-=======
   color: #aaa;
   background-color: #131313;
->>>>>>> 5413925e481496c0058ed3cbaed63fee4a73f38f
   grid-area: footer-section1;
 }
 
@@ -823,11 +810,8 @@ width: 12em;
 .footer-section3 {
   background-color: #000;
   display: grid;
-<<<<<<< HEAD
   height: 100px;
-=======
   font-size: 13px;
->>>>>>> 5413925e481496c0058ed3cbaed63fee4a73f38f
   padding: 15px;
   color: #aaa;
   place-items: center center;
@@ -945,7 +929,8 @@ width: 12em;
     display: grid;
     grid-row: 2/3;
     gap: 25px;
-    grid-template-rows: 580px 870px 430px 2700px 650px;
+    margin-top: 20px;
+    grid-template-rows: 580px 870px 430px 2700px 520px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
