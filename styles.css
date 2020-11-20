@@ -280,13 +280,6 @@ a:hover {
   font-size: 0.8em;
 }
 
-.row5-section-1-5 a {
-  display: flex;
-  width: 100px;
-  font-size: 0.75em;
-  justify-content: flex-end;
-}
-
 .footer-icons > a {
   color: white;
   border: 1px solid var(--black);
@@ -894,22 +887,16 @@ a:hover {
     padding: 7px;
   }
 
-  .row5-section-1-b > a {
+  .row5-section-1-b {
     font-size: 1rem;
-    font-weight: 100;
+    color: var(--orange);
+    font-weight: 400;
     margin-right: 1.5em;
   }
 
   .row3-section-1-b a {
     border-right: 1px solid var(--orange);
     padding: 0 0.5em 0 0.5em;
-  }
-
-  .row5-section-1 > div > a {
-    color: var(--orange);
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 0.25em;
   }
 
   .header1-row1-section-01 a:hover,
@@ -933,7 +920,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 25px;
-    grid-template-rows: 580px 720px 420px 3200px 650px;
+    grid-template-rows: 580px 870px 430px 2700px 650px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1133,16 +1120,14 @@ a:hover {
   .row-4 {
     display: grid;
     grid-row: 4/5;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
-      "row4-section-1  row4-section-2"
-      "row4-section-3  row4-section-4"
-      "row4-section-5  row4-section-6"
-      "row4-section-7  row4-section-8"
-      "row4-section-9  .";
+      "row4-section-1  row4-section-2 row4-section-3"
+      "row4-section-4 row4-section-5  row4-section-6"
+      "row4-section-7  row4-section-8 row4-section-9";
   }
 
   .row-5 {
@@ -1181,15 +1166,15 @@ a:hover {
     align-items: center;
   }
 
+
   .row5-image {
-    width: 14em;
+    width: 15em;
     height: 9em;
   }
 
   .row5-text {
     color: black;
     grid-column: 2/4;
-    padding: 0.5em;
     grid-area: row5-text;
     display: flex;
     flex-direction: column;
@@ -1333,7 +1318,7 @@ a:hover {
     display: grid;
     grid-row: 2/3;
     gap: 15px;
-    grid-template-rows: 500px 600px 420px 2200px 1070px;
+    grid-template-rows: 500px 600px 420px 1600px 570px;
     grid-area: row-section;
     grid-template-areas:
       "row-1"
@@ -1380,6 +1365,7 @@ a:hover {
   }
 
   .row-2 {
+    margin-left: 15px;
     display: grid;
     grid-row: 2/3;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1448,23 +1434,22 @@ a:hover {
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
-      "row4-section-1  row4-section-2  row4-section-3"
-      "row4-section-4  row4-section-5  row4-section-6"
-      "row4-section-7  row4-section-8  row4-section-9";
+      "row4-section-1  row4-section-2  row4-section-3 row4-section-4"
+      "row4-section-5  row4-section-6  row4-section-7  row4-section-8"
+      "row4-section-9  .  .  . ";
   }
 
   .row-5 {
     display: grid;
     grid-row: 5/6;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50px repeat(3, 350px);
     gap: 15px;
     grid-area: row-5;
     grid-template-areas:
-      "row5-section-1  row5-section-1  row5-section-1 "
-      "row5-section-2  row5-section-3 row5-section-4"
-      "row5-section-5  row5-section-6  row5-section-7 "
-      "row5-section-8  row5-section-9 . ";
+      "row5-section-1  row5-section-1 row5-section-1  row5-section-1 "
+      "row5-section-2  row5-section-3 row5-section-4  row5-section-5 "
+      "row5-section-6  row5-section-7 row5-section-8 row5-section-9 ";
   }
 
   .row5-section-1 {
@@ -1488,7 +1473,8 @@ a:hover {
   }
 
   .row5-image {
-    width: 80%;
+    width: 90%;
+    margin-left: 15px;
     height: auto;
   }
 
