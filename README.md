@@ -3,8 +3,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-A Responsive heat map of the The Next Web (https://thenextweb.com/) website that indicates which elements have the greatest weight in the visual hierarchy as well as become responsive .
-
+A Responsive Mobile, iPad, and Web page clone of The Next Web (https://thenextweb.com/). We used css grid and css flex to position all of the elements in this project. 
 
 
 ![screenshot](./asset/screenshot.png)
