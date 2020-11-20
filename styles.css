@@ -130,10 +130,15 @@ a:hover {
   display: grid;
   grid-row: 2/3;
   gap: 15px;
+<<<<<<< HEAD
   width: 98%;
   margin-left: auto;
   margin-right: auto;
   grid-template-rows: 50em 50em 67em 400em 50em;
+=======
+  width: 100%;
+  grid-template-rows: 50em 50em 67em 400em 63em;
+>>>>>>> 5413925e481496c0058ed3cbaed63fee4a73f38f
   grid-area: row-section;
   grid-template-areas:
     "row-1"
@@ -796,11 +801,17 @@ width: 12em;
 .footer-section1 {
   grid-row: 1/2;
   display: flex;
+  height: 120px;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+<<<<<<< HEAD
   height: 100px;
   background-color: #3f3f3f;
+=======
+  color: #aaa;
+  background-color: #131313;
+>>>>>>> 5413925e481496c0058ed3cbaed63fee4a73f38f
   grid-area: footer-section1;
 }
 
@@ -810,11 +821,15 @@ width: 12em;
 }
 
 .footer-section3 {
-  background-color: var(--black);
+  background-color: #000;
   display: grid;
+<<<<<<< HEAD
   height: 100px;
+=======
+  font-size: 13px;
+>>>>>>> 5413925e481496c0058ed3cbaed63fee4a73f38f
   padding: 15px;
-  color: white;
+  color: #aaa;
   place-items: center center;
   text-align: center;
   grid-area: footer-section3;
@@ -848,7 +863,6 @@ width: 12em;
     grid-area: header-row1-section-1;
     text-align: center;
     align-items: center;
-
   }
 
   .header-row1-section-00 {
@@ -1177,7 +1191,6 @@ width: 12em;
     align-items: center;
   }
 
-
   .row5-image {
     width: 15em;
     height: 9em;
@@ -1193,6 +1206,15 @@ width: 12em;
 
   .footer-section1 {
     margin-top: 1em;
+  }
+
+  .footer-section3 > div {
+    display: flex;
+  }
+
+  .footer-section3 > div p {
+    font-size: 0.8rem;
+    color: #aaa;
   }
 }
 
@@ -1227,8 +1249,8 @@ width: 12em;
     display: flex;
     background-color: black;
     justify-content: space-between;
+    font-size: 0.8rem;
   }
-
 
   .header-row1-section-1 {
     grid-area: header-row1-section-1;
@@ -1281,10 +1303,8 @@ width: 12em;
   }
 
   .header1-row1-section-02 a {
-    padding : 0 1em 0 0;
+    padding: 0 1em 0 0;
   }
-
-
 
   .row5-section-1 > a {
     color: var(--orange);
@@ -1366,13 +1386,6 @@ width: 12em;
     grid-template-areas:
       "row1-section-1 row1-section-2 "
       "row1-section-1 row1-section-3";
-  }
-
-  .header-row1-section-00 {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--black);
-    font-size: 0.8rem;
   }
 
   .row-2 {
