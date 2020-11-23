@@ -117,6 +117,10 @@ a:hover {
   grid-area: icon-div;
 }
 
+.icon-div .fa-bars {
+  color: var(--orange);
+} 
+
 .icon {
   border: 1px solid #eee;
   padding: 10px 10px;
@@ -159,7 +163,7 @@ a:hover {
 }
 
 .row1-text {
-  margin-top: -10px;
+  margin-top: -40px;
 }
 
 .row-top :nth-child(1) {
@@ -170,6 +174,10 @@ a:hover {
   color: white;
   font-size: 1.2em;
   font-weight: bold;
+}
+
+.eu-funding {
+  margin-top: -40px;
 }
 
 .row-bottom {
@@ -1376,6 +1384,12 @@ a:hover {
   .eu-funding {
     padding-left: 15px;
   }
+
+.eu-funding1 {
+    padding-left: 15px;
+  }
+
+
 
   .row5-section-1 > a {
     color: var(--orange);
