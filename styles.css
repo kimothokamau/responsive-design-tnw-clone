@@ -141,9 +141,8 @@ a:hover {
 .row-1 {
   display: grid;
   grid-row: 1/2;
-  grid-template-rows: 15em 15em 15em;
-  gap: 15px;
-  height: 30em;
+  grid-template-rows: repeat(3, 220px);
+  gap: 10px;
   padding: 8px;
   grid-area: row-1;
   grid-template-areas:
@@ -846,6 +845,25 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .wrapper {
+    display: grid;
+    /* padding: 5px; */
+    grid-template-rows: 92px 500px 5150px 200px;
+    /* row-gap: 15px; */
+    /* width: 90%; */
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    grid-template-areas:
+        "main-header"
+        "row-1"
+        "row-section"
+        "main-footer";
+
+  }
+
+
   .main-header {
     display: grid;
     grid-row: 1/-1;
@@ -929,11 +947,6 @@ a:hover {
     margin-right: 1.5em;
   }
 
-  .row3-section-1-b a {
-    border-right: 1px solid var(--orange);
-    padding: 0 0.5em 0 0.5em;
-  }
-
   .header1-row1-section-01 a:hover,
   .header1-row1-section-02 a:hover {
     color: white;
@@ -954,12 +967,11 @@ a:hover {
   .row-section {
     display: grid;
     grid-row: 2/3;
-    gap: 25px;
+    gap: 10px;
     margin-top: 20px;
-    grid-template-rows: 580px 870px 430px 2700px 520px;
+    grid-template-rows: 850px 550px 2900px 750px;
     grid-area: row-section;
     grid-template-areas:
-      "row-1"
       "row-2"
       "row-3"
       "row-4"
@@ -986,10 +998,15 @@ a:hover {
     grid-row: 1/2;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
+    padding: 0;
     grid-area: row-1;
     grid-template-areas:
       "row1-section-1 row1-section-2"
       "row1-section-1 row1-section-3";
+  }
+
+  .row1-logo {
+    visibility: hidden;
   }
 
   .row-2 {
@@ -1004,6 +1021,19 @@ a:hover {
       "row2-section-2 row2-section-3 row2-section-4"
       "row2-section-5 row2-section-6 row2-section-7"
       "row2-section-8 row2-section-9 .";
+  }
+
+  .row-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1.2;
+  }
+
+  .row-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5em;
   }
 
   .row2-section-1 {
@@ -1090,28 +1120,19 @@ a:hover {
     height: 9em;
   }
 
-  /* .row2-box,
-  .row-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  } */
-
   .row-3 {
     display: grid;
-    grid-row: 3/4;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80px  300px;
+    grid-template-rows: 150px 450px;
     grid-area: row-3;
     grid-template-areas:
-      "row3-section-1 row3-section-1 . "
+      "row3-section-1 . . "
       "row3-section-2 row3-section-3 row3-section-4";
   }
 
   .row3-section-1 {
     display: flex;
     flex-direction: column;
-    grid-row: 1/2;
     color: var(--orange);
     background-color: var(--white);
     grid-area: row3-section-1;
@@ -1119,7 +1140,8 @@ a:hover {
 
   .row3-section-1-b {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .row3-section-1-b :nth-child(1) {
