@@ -28,11 +28,12 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: 10px 98% 1%;
+  grid-template-rows: 50px 600px 98% 1%;
   row-gap: 15px;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
     "main-header"
+    "row-1"
     "row-section"
     "main-footer";
 }
@@ -131,7 +132,6 @@ a:hover {
   grid-template-rows: 50em 50em 67em 400em 50em;
   grid-area: row-section;
   grid-template-areas:
-    "row-1"
     "row-2"
     "row-3"
     "row-4"
@@ -141,9 +141,10 @@ a:hover {
 .row-1 {
   display: grid;
   grid-row: 1/2;
-  margin-top: 50px;
   grid-template-rows: 15em 15em 15em;
   gap: 15px;
+  height: 30em;
+  padding: 8px;
   grid-area: row-1;
   grid-template-areas:
     "row1-section-1"
@@ -164,8 +165,12 @@ a:hover {
 .row-bottom {
   display: flex;
   color: white;
+  margin:5px;
 }
 
+.row-bottom i {
+  margin-left: 5px;
+}
 .row-bottom:hover {
   cursor: pointer;
   color: white;
@@ -177,15 +182,24 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/transparency-796x524.jpg");
+
+
+  background:
+  linear-gradient(
+    rgba(255, 0, 0, 0.45),
+    rgba(31, 17, 17, 0.45)
+  ),
+  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/transparency-796x524.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   grid-area: row1-section-1;
 }
 
+
 .row1-logo {
-  width: 12em;
+  width: 20em;
+  margin:13px;
 }
 
 .row1-section-2 {
@@ -197,7 +211,12 @@ a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/Untitled-design-2020-11-17T120921.079-796x417.png");
+  background:
+  linear-gradient(
+    rgba(206, 205, 205, 0.45),
+    rgba(10, 8, 8, 0.45)
+  ),
+  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/Untitled-design-2020-11-17T120921.079-796x417.png);
   grid-area: row1-section-2;
 }
 
@@ -210,7 +229,12 @@ a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/image-796x417.png");
+  background:
+  linear-gradient(
+    rgba(206, 205, 205, 0.45),
+    rgba(10, 8, 8, 0.45)
+  ),
+  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/11/image-796x417.png);
   grid-area: row1-section-3;
 }
 
