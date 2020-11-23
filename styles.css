@@ -25,11 +25,14 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0 1em 0 1em;
 }
+.bold {
+  font-weight: bold;
+  color: white;
+}
 
 .wrapper {
   display: grid;
-  grid-template-rows: 50px 600px 98% 1%;
-  row-gap: 15px;
+  grid-template-rows: 50px 580px 98% 1%;
   font-family: 'Roboto', sans-serif;
   grid-template-areas:
     "main-header"
@@ -46,7 +49,7 @@ body {
   width: 100%;
   background-color: #eee;
   grid-area: main-header;
-  position: absolute;
+  position: fixed;
   grid-template-areas: "header-row-1";
 }
 
@@ -129,7 +132,7 @@ a:hover {
   width: 98%;
   margin-left: auto;
   margin-right: auto;
-  grid-template-rows: 50em 50em 67em 400em 50em;
+  grid-template-rows: 50em 65em 408em 15em;
   grid-area: row-section;
   grid-template-areas:
     "row-2"
@@ -140,15 +143,20 @@ a:hover {
 
 .row-1 {
   display: grid;
-  grid-row: 1/2;
-  grid-template-rows: repeat(3, 220px);
+  grid-template-rows: repeat(3, 180px);
   gap: 10px;
-  padding: 8px;
+  padding-top: 8px;
   grid-area: row-1;
   grid-template-areas:
     "row1-section-1"
     "row1-section-2"
     "row1-section-3";
+}
+.row1-logo{
+  visibility: hidden;
+}
+.row1-text{
+margin-top: -10px;
 }
 
 .row-top :nth-child(1) {
@@ -157,7 +165,7 @@ a:hover {
 
 .row-top > p {
   color: white;
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -175,14 +183,13 @@ a:hover {
   color: white;
 }
 
+
 .row1-section-1 {
   grid-row: 1/2;
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-
   background:
   linear-gradient(
     rgba(255, 0, 0, 0.45),
@@ -297,14 +304,15 @@ a:hover {
   color: black;
   grid-column: 2/4;
   grid-area: row-text;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; */
+  margin-left: 5px;
 }
 
 .row-text :nth-child(1) {
   font-weight: bold;
   font-size: 0.8em;
+  margin-bottom: 5px;
 }
 
 .row-text :nth-child(2) {
@@ -470,6 +478,7 @@ a:hover {
   height: auto;
   position: absolute;
   margin: 0.5em;
+  z-index: 2;
 }
 
 .row3-funding :nth-child(2) {
@@ -672,7 +681,6 @@ a:hover {
 
 .row-5 {
   display: grid;
-  grid-row: 5/6;
   grid-template-rows: 50px 100px 100px 100px 100px 100px 100px 100px 100px;
   font-size: 1rem;
   background-color: white;
@@ -697,10 +705,10 @@ a:hover {
 .row5-section-7,
 .row5-section-8,
 .row5-section-9 {
-  display: grid;
+  display: flex;
   justify-items: start;
   grid-template-rows: 1fr;
-  grid-template-areas: "row5-image row5-text";
+  grid-template-areas: "row-image row-text";
 }
 
 .row5-section-1 {
@@ -715,29 +723,13 @@ a:hover {
   font-weight: 500;
 }
 
-.row5-image {
-  grid-column: 1/2;
-  width: 7em;
-  height: 5em;
-  grid-area: row5-image;
-}
-
-.row5-text {
-  color: black;
-  grid-column: 2/4;
-  padding: 0.5em;
-  grid-area: row5-text;
-  display: flex;
-  flex-direction: column;
-}
-
 .row5-price {
   display: flex;
   padding: 0.5em;
 }
 
-.row5-text :nth-child(1) {
-  font-size: 0.8em;
+.row-text :nth-child(1) {
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -748,7 +740,9 @@ a:hover {
 }
 
 .row5-price :nth-child(2) {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: black;
 }
 
 .row5-section-1-5 {
@@ -848,10 +842,7 @@ a:hover {
 
   .wrapper {
     display: grid;
-    /* padding: 5px; */
     grid-template-rows: 92px 500px 5150px 200px;
-    /* row-gap: 15px; */
-    /* width: 90%; */
     margin-left: auto;
     margin-right: auto;
     font-family: 'Roboto', sans-serif;
@@ -871,7 +862,6 @@ a:hover {
     grid-template-rows: 90px;
     background-color: #eee;
     grid-area: main-header;
-    position: fixed;
     grid-template-areas:
       "header-row-1"
       "header-row-2";
@@ -1255,14 +1245,12 @@ a:hover {
 }
 
 /* PC LAYOUT (portrait and landscape) */
+/* PC LAYOUT (portrait and landscape) */
 @media screen and (min-width: 1025px) {
-
-
 
   .wrapper {
     display: grid;
-    padding: 8px;
-    grid-template-rows: 50px 600px 3600px 200px;
+    grid-template-rows: 50px 500px 3450px 200px;
     row-gap: 15px;
     font-family: 'Roboto', sans-serif;
     grid-template-areas:
@@ -1270,15 +1258,14 @@ a:hover {
         "row-1"
         "row-section"
         "main-footer";
-
   }
+
   .main-header {
     display: grid;
     grid-row: 1/-1;
     grid-template-columns: 1fr;
     grid-template-rows: 90px;
     width: 100%;
-    padding: 8px;
     background-color: #eee;
     grid-area: main-header;
     position: fixed;
@@ -1409,7 +1396,7 @@ a:hover {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    grid-template-rows: 600px 500px 1700px 670px;
+    grid-template-rows: 650px 420px 1700px 670px;
     grid-area: row-section;
     grid-template-areas:
       "row-2"
@@ -1436,7 +1423,6 @@ a:hover {
 
   .row-1 {
     display: grid;
-    grid-row: 1/2;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 5px;
@@ -1473,7 +1459,7 @@ a:hover {
 
   .row-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     margin-bottom: 0.5em;
   }
 
@@ -1634,7 +1620,7 @@ a:hover {
 
   .footer-section1 {
     display: flex;
-    height: 140px;
+    height: 150px;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
