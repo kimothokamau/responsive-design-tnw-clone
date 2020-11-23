@@ -837,7 +837,7 @@ a:hover {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .wrapper {
     display: grid;
-    grid-template-rows: 92px 500px 5250px 200px;
+    grid-template-rows: 92px 500px 6100px 200px;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Roboto', sans-serif;
@@ -952,7 +952,7 @@ a:hover {
     grid-row: 2/3;
     gap: 10px;
     margin-top: 20px;
-    grid-template-rows: 850px 550px 2900px 800px;
+    grid-template-rows: 850px 550px 3600px 800px;
     grid-area: row-section;
     grid-template-areas:
       "row-2"
@@ -1163,15 +1163,15 @@ a:hover {
 
   .row-4 {
     display: grid;
-    grid-row: 4/5;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
     gap: 15px;
     grid-area: row-4;
     grid-template-areas:
-      "row4-section-1  row4-section-2 row4-section-3"
-      "row4-section-4 row4-section-5  row4-section-6"
-      "row4-section-7  row4-section-8 row4-section-9";
+      "row4-section-1  row4-section-2"
+      "row4-section-3  row4-section-4"
+      "row4-section-5  row4-section-6"
+      "row4-section-7  row4-section-8";
   }
 
   .row-5 {
@@ -1211,11 +1211,6 @@ a:hover {
     align-items: center;
   }
 
-  /* .row-image {
-    width: 100%;
-    height: 160px;
-    margin-bottom: 1em;
-  } */
 
   .row5-text {
     color: black;
