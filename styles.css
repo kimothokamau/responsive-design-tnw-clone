@@ -175,7 +175,7 @@ a:hover {
 .row-bottom {
   display: flex;
   color: white;
-  margin: 5px;
+  
 }
 
 .row-bottom i {
@@ -189,8 +189,6 @@ a:hover {
 
 .row1-section-1 {
   grid-row: 1/2;
-  margin-top: -40px;
-  padding-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -208,7 +206,6 @@ a:hover {
 
 .row1-section-2 {
   grid-row: 2/3;
-  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -226,7 +223,6 @@ a:hover {
 
 .row1-section-3 {
   grid-row: 3/4;
-  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1364,9 +1360,37 @@ a:hover {
     padding: 0 1em 0 0;
   }
 
+  .row-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: row-1;
+    grid-template-areas: 
+      "row-1-section1 row2-section2"
+      "row-1-section1 row2-section3";
+  }
+
   .row1-logo {
     visibility: visible;
+    width: 300px;
+    height: 200px;
+    padding-left: 15px;
   }
+
+  .row-bottom {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+
+
+  .row-top, .eu-funding {
+    padding-left: 15px;
+  }
+
+
+
 
   .row5-section-1 > a {
     color: var(--orange);
